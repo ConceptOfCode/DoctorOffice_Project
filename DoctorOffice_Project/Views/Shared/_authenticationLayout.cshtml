@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header class="header-section">
+        <div class="container">
+            <!-- Site Logo -->
+            <a href="index.html" class="site-logo">
+                <img src="img/logo.png" alt="">
+            </a>
+            <!-- responsive -->
+            <div class="nav-switch">
+                <i class="fa fa-bars"></i>
+            </div>
+            <!-- Main Menu -->
+            <ul class="main-menu">
+                <!-- <li><a href="elements.html"><i class="flaticon-020-decay"></i></a></li> -->
+                <li><a href="#">تماس با ما</a></li>
+                <li><a href="#">درباره ما</a></li>
+                <!-- <li><a href="blog.html">وبلاگ</a></li> -->
+                <li><a href="ReservePage.html">رزرو نوبت</a></li>
+                <li><a href="loginPage.html">ورود به حساب کاربری</a></li>
+                <li><a href="Register.html">تشکیل پرونده</a></li>
+                <li class="active"><a href="index.html">خانه</a></li>
+            </ul>
+        </div>
+        <div class="header-info">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 hi-item">
+                        <div class="hs-icon">
+                            <img src="img/icons/map-marker.png" alt="">
+                        </div>
+                        <div class="hi-content">
+                            <h6>خیابان ایکس</h6>
+                            <p>ایران- تهران</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 hi-item">
+                        <div class="hs-icon">
+                            <img src="img/icons/clock.png" alt="">
+                        </div>
+                        <div class="hi-content">
+                            <h6>ساعت کاری</h6>
+                            <p>شنبه تا دوشنبه 8 - 19</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 hi-item">
+                        <div class="hs-icon">
+                            <img src="img/icons/phone.png" alt="">
+                        </div>
+                        <div class="hi-content">
+                            <h6>+885 332 1568</h6>
+                            <p>شماره تماس</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 hi-item">
+                        <div class="hs-icon">
+                            <img src="img/icons/calendar.png" alt="">
+                        </div>
+                        <div class="hi-content">
+                            <h6>خیابان ایکس</h6>
+                            <p>ایران- تهران</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

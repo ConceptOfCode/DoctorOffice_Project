@@ -1,0 +1,100 @@
+﻿
+@model DoctorPanelNewPrescriptionInfoViewModel
+
+@{
+    ViewData["Title"] = "insertData";
+    Layout = "~/Areas/doctorPanel/Views/Shared/_doctorLayout.cshtml";
+}
+
+<form id="medicineInfo" action="/DoctorPanel/AddPrescription" method="post">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-right">
+            <div class="alert alert-primary">
+                <h3 class="text-muted">ثبت نسخه ی بیماران </h3>
+                <label class="text-primary">کد رهگیری نوبت :</label> <label id="turnsID">@Model.turnsID</label><br>
+                <label class="text-primary">نام و نام خانوادگی بیمار : </label> <label>@Model.patientFullName</label><br>
+                <label class="text-primary">شماره ملی بیمار : </label> <label>@Model.PatientNationalID</label><br>
+                <label class="text-primary">مشخصات دکتر :</label> <label>@Model.doctorFullNane</label>
+            </div>
+            <hr>
+            <div class="row container">
+                <section class="col-xl-4">
+                    <h3 class="text-muted">جزییات دارو را وارد کنید</h3>
+                </section>
+                <!--float-left offset-xl-3 offset-lg-3 offset-sm-3 offset-md-3-->
+                <div class="row col-xl-12" id="contentMedicine">
+                    <div id="enterMedicine" class="row col-xl-6 col-md-6 col-sm-6 col-lg-6">
+                        <label>نام دارو : </label><input type="text" name="" id="" class="form-control">
+                        <label>طریقه مصرف دارو : </label><textarea name="" id="" cols="30" rows="10" class="form-control"></textarea>
+                        <section class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <input type="text" name="" id="fromDate" class="form-control" placeholder="از تاریخ : ">
+                        </section>
+                        <section class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                            <input type="text" name="" id="toDate" class="form-control" placeholder="تا تاریخ : ">
+                        </section>
+                    </div>
+                    <div class="col-xl-6">
+
+                    </div>
+                </div>
+
+                <section class="container" id="medicineButtons">
+                    <a id="addMedicine" class="btn btn-primary btn-sm">اضافه کردن دارو</a>
+                </section>
+
+                <input type="text" name="turnsID" value="@Model.turnsID" hidden />
+                <div id="resultTable" class="row container">
+                    <div class="container alert alert-warning">
+                        <h4>جدول نهایی دارو ها</h4>
+                        <ul style="padding-right: 1.8em;">
+                            <li>برای حذف دارو از جدول اصلی فقط کافی است فیلد های آنرا خالی کنید</li>
+                        </ul>
+                    </div>
+                    <table id="medicineFinalList" class="table ">
+                        <thead class="thead-dark">
+                        <th>شناسه نوبت</th>
+                        <th>نام دارو</th>
+                        <th>نحوه مصرف</th>
+                        <th>ازتاریخ</th>
+                        <th>تا تاریخ</th>
+                        </thead>
+
+                        <tbody>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-right">
+            <h3 class="text-muted">ثبت یک یاداشت برای بیمار</h3>
+            <hr>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm6">
+                        <label>عنوان یاداشت : </label> <input type="text" name="titleNote" id="titleNote" class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                        <label>متن کامل یاداشت : </label>
+                        <textarea name="fullTextNote" id="fullTextNote" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <section class="container" id="medicineButtons">
+                <a id="SavePrescription" value="ذخیره" class="btn btn-success btn-sm">ذخیره</a>
+                <a id="Cancel" class="btn btn-danger btn-sm">انصراف</a>
+            </section>
+        </div>
+    </div>
+</form>
+
+@section ScriptsOnViews{
+    <script src="/js/medicineScript.js"></script>
+}

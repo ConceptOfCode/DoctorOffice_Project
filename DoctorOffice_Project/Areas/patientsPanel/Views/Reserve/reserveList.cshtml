@@ -1,0 +1,75 @@
+﻿
+@{
+    ViewData["Title"] = "reserveList";
+    Layout = "~/Areas/patientsPanel/Views/Shared/_patientsLayout.cshtml";
+}
+
+
+<div class="row" id="searchField">
+    <section class="col-lg-2 col-md-2 col-sm-2 col-xl-2">
+        <section class="row">
+            <section class="col-lg-6 col-md-6 col-sm-6 col-xl-6">
+                <label>تاریخ :</label>
+            </section>
+        </section>
+    </section>
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-center">
+        <input type="text" class="form-control" name="date" id="dateBox" placeholder="تاریخ را وارد کنید ...">
+    </section>
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-right">
+        <a id="searchButton" class="btn btn-success">جست و جو</a>
+    </section>
+</div>
+
+<table id="reserveList" class="table table-hover table-bordered">
+    <thead class="thead-dark">
+    <th>کد رهگیری</th>
+    <th>تاریخ رزرو</th>
+    <th>تاریخ امروز</th>
+    <th>مشخصات دکتر</th>
+    <th>عملیات</th>
+    </thead>
+
+    <tbody>
+        <tr>
+            <td>1001</td>
+            <td>1398/08/08</td>
+            <td>1398/12/01</td>
+            <td>محندعلی</td>
+            <td>
+                <a class="btn btn-sm btn btn-primary">جزییات</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>1001</td>
+            <td>1398/08/08</td>
+            <td>1398/12/01</td>
+            <td>محندعلی</td>
+            <td>
+                <a class="btn btn-sm btn btn-primary">جزییات</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>1001</td>
+            <td>1398/08/08</td>
+            <td>1398/12/01</td>
+            <td>محندعلی</td>
+            <td>
+                <a class="btn btn-sm btn btn-primary">جزییات</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>1001</td>
+            <td>1398/08/08</td>
+            <td>1398/12/01</td>
+            <td>محندعلی</td>
+            <td>
+                <a class="btn btn-sm btn btn-primary">جزییات</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

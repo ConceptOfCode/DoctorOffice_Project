@@ -1,0 +1,220 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_defaultLayout.cshtml";
+}
+
+<!-- Hero section -->
+<section class="hero-section">
+    <div class="hero-slider owl-carousel">
+        <!-- item -->
+        <div class="hs-item set-bg text-white" data-setbg="img/slide-1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 text-right">
+                        <h2>لبخند شما زیباست</h2>
+                        <p>
+                            شما میتوانید با تشکیل پرونده در درمانگاه و تکمیل اطلاعات خود رزرو نوبت را برای خود سهولت بخشید
+                        </p>
+                        <a href="#" class="site-btn">ورود به حساب کاربری</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- item -->
+        <div class="hs-item set-bg text-white" data-setbg="img/slide-1.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12 text-right">
+                        <h2>لبخند شما زیباست</h2>
+                        <p>
+                            و از امکاناتی همچون مشاهده لیست رزرو ها و یاداشت های دکتر بهره مند شوید
+                        </p>
+                        <a href="#" class="site-btn">ورود به حساب کاربری</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hero section end -->
+<!-- Banner section -->
+<!-- <section class="banner-section">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 banner-text text-white">
+        <h4>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم</h4>
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوملورم ایپسوم متن
+          ساختگی با تولید سادگی نامفهومایپسوم متن ساختگی با تولید سادگی
+          نامفهومایپسوم متن ساختگی با تولید سادگی نامفهوم
+        </p>
+      </div>
+      <div class="col-lg-2 text-lg-right">
+        <a href="#" class="site-btn sb-light">ادامه مطلب</a>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- Banner section end -->
+<!-- About section -->
+<section class="about-section spad">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <img src="img/about.jpg" alt="" />
+            </div>
+            <div class="col-lg-7 about-text">
+                <h2>ما به دندان های شما اهمیت میدیم</h2>
+                <p>
+                    ما در این درمانگاه در تلاشیم با استفاده از امکانات روز دنیا و همچنین پزشکانی مجرب درمانی بسیار بسیار عالی را برای مریضان فراهم آوریم
+                    و همچنین امیدواریم امکانات و خدمات ما برای مریضان قابل قبول و همچنین کارامد بوده باشد
+                </p>
+                <img src="img/awards.jpg" alt="" />
+            </div>
+        </div>
+    </div>
+</section>
+<!-- About section end -->
+<!-- Facts section -->
+<section class="facts-section set-bg" data-setbg="img/facts-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 fact">
+                <i class="flaticon-003-tooth-3"></i>
+                <h2>531</h2>
+                <p>بیماران راضی</p>
+            </div>
+            <div class="col-md-3 col-sm-6 fact">
+                <i class="flaticon-002-toothbrush-1"></i>
+                <h2>14</h2>
+                <p>بیماران درمان شده</p>
+            </div>
+            <div class="col-md-3 col-sm-6 fact">
+                <i class="flaticon-030-tooth"></i>
+                <h2>678</h2>
+                <p>بیماران دارای پرونده</p>
+            </div>
+            <div class="col-md-3 col-sm-6 fact">
+                <i class="flaticon-023-tooth-1"></i>
+                <h2>2134</h2>
+                <p>نوبت های رزرو شده</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Facts section end -->
+<!-- Services section -->
+    @(await Component.InvokeAsync("ServicesComponent"))
+<!-- Services section end -->
+<!-- Gallery section -->
+<div class="gallery-section">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 p-0">
+                <img src="img/gallery/1.jpg" alt="" />
+            </div>
+            <div class="col-lg-3 col-sm-6 p-0">
+                <img src="img/gallery/2.jpg" alt="" />
+            </div>
+            <div class="col-lg-3 col-sm-6 p-0">
+                <img src="img/gallery/3.jpg" alt="" />
+            </div>
+            <div class="col-lg-3 col-sm-6 p-0">
+                <img src="img/gallery/4.jpg" alt="" />
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Gallery section end -->
+<!-- Testimonials section -->
+<section class="testimonials-section spad">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>توصیفات</h2>
+        </div>
+    </div>
+    <div class="testimonials-warp">
+        <div class="testimonials-slider owl-carousel">
+            <div class="testimonial-item">
+                <div class="ts-content">
+                    <div class="quta">“</div>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                    </p>
+                    <h6>مستر ایکس</h6>
+                    <span>بیمار</span>
+                </div>
+                <div class="author-pic set-bg" data-setbg="img/review/1.jpg"></div>
+            </div>
+            <div class="testimonial-item">
+                <div class="ts-content">
+                    <div class="quta">“</div>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                    </p>
+                    <h6>مستر ایکس</h6>
+                    <span>بیمار</span>
+                </div>
+                <div class="author-pic set-bg" data-setbg="img/review/2.jpg"></div>
+            </div>
+            <div class="testimonial-item">
+                <div class="ts-content">
+                    <div class="quta">“</div>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                    </p>
+                    <h6>مستر ایکس</h6>
+                    <span>بیمار</span>
+                </div>
+                <div class="author-pic set-bg" data-setbg="img/review/3.jpg"></div>
+            </div>
+            <div class="testimonial-item">
+                <div class="ts-content">
+                    <div class="quta">“</div>
+                    <p>
+                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                    </p>
+                    <h6>مستر ایکس</h6>
+                    <span>بیمار</span>
+                </div>
+                <div class="author-pic set-bg" data-setbg="img/review/2.jpg"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonials section end -->
+<!-- Newsletter section -->
+<!-- <section class="newsletter-section spad">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 text-lg-right">
+        <form class="newsletter-form">
+          <input type="text" placeholder="لطفا ایمیل خود را وارد کنید.." />
+          <button class="site-btn sb-dark">عضویت</button>
+        </form>
+      </div>
+      <div class="col-lg-7 banner-text text-white">
+        <h4>عضویت در خبر نامه</h4>
+        <p>
+          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+          استفاده از طراحان گرافیک است
+        </p>
+      </div>
+    </div>
+  </div>
+</section> -->
+<!-- Newsletter section end -->

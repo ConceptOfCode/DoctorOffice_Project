@@ -1,0 +1,99 @@
+﻿
+@model IEnumerable<DoctorPanelPrescriptionListViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/doctorPanel/Views/Shared/_doctorLayout.cshtml";
+}
+
+
+
+<div class="row" id="searchField">
+    <section class="col-lg-3 col-md-3 col-sm-3 col-xl-3">
+        <section class="row">
+            <section class="col-lg-6 col-md-6 col-sm-6 col-xl-6">
+                <label>شماره ملی :</label>
+            </section>
+        </section>
+    </section>
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-center">
+        <input type="text" class="form-control margin-top-2" id="SearchPrescriptionValue" placeholder="جست و جوی نسخه مریض...">
+    </section>
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-right">
+        <a id="searchButton" class="btn btn-success margin-top-2-3">جست و جو</a>
+    </section>
+</div>
+
+<table id="reserveList" class="table table-hover table-bordered">
+    <thead class="thead-dark">
+    <th>کد رهگیری نوبت</th>
+    <th>نام و نام خانوادگی</th>
+    <th>شماره ملی</th>
+    <th>تاریخ ثبت نسخه</th>
+    <th>مشخصات دکتر</th>
+    <th>عملیات</th>
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.turnsID</td>
+                <td>
+                    @if (item.patientFullName != null || item.patientFullName != "")
+                    {
+                        @item.patientFullName
+                    }
+                    else
+                    {
+                        @item.temporaryPatientFullName
+                    }
+                </td>
+                <td>
+                    @if (item.PatientNationalID != null)
+                    {
+                        @item.PatientNationalID
+                    }
+                    else
+                    {
+                        @item.temporaryPatientNationalID
+                    }
+                </td>
+                <td>@item.createDateTime</td>
+                <td>@item.doctorFullNasme</td>
+                <td>
+                    <a asp-controller="Prescription" asp-action="updateData" asp-area="doctorPanel" asp-route-prescriptionID="@item.PrescriptionsID" class="btn btn-sm btn btn-warning">ویرایش</a>
+                    <a onclick="deleteMedicines(@item.PrescriptionsID,@item.turnsID)" class="btn btn-sm btn btn-danger">حذف</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
+
+<div class="modal" tabindex="-1" role="dialog" id="Modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" id="headerModal">
+                <h5 class="modal-title" id="ModalTitle">Modal title</h5>
+                @*<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>*@
+            </div>
+            <div class="modal-body" id="ModalBody">
+
+            </div>
+            <div class="modal-footer" id="btns">
+                <button type="button" class="btn btn-primary" id="AcceptDelete">می پذیرم</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section ScriptsOnViews{
+<script src="/js/medicineScript.js"></script>
+}

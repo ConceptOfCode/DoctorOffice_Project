@@ -1,0 +1,49 @@
+﻿@model IEnumerable<DoctorOffice.ViewModels.clinicInformationsList>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/secretaryPanel/Views/Shared/_secretaryLayout.cshtml";
+}
+
+<div class="row" id="searchField">
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-right">
+        <a asp-controller="clinicSpecifications" asp-action="insertData" asp-area="secretaryPanel" id="searchButton" class="btn btn-success">ایجاد نشانی جدید</a>
+    </section>
+</div>
+
+<table id="reserveList" class="table table-hover table-bordered">
+    <thead class="thead-dark">
+    <th>شناسه</th>
+    <th>نشانی</th>
+    <th>ساعت شروع کار</th>
+    <th>ساعت اتمام کار</th>
+    <th>فعال</th>
+    <th>عملیات</th>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.clinicSpecificationsID</td>
+                <td>@item.shortAddress</td>
+                <td>@item.startTime</td>
+                <td>@item.endTime</td>
+                @{
+                    if (item.isActive)
+                    {
+                        <td>فعال</td>
+                    }
+                    else
+                    {
+                        <td>غیر فعال</td>
+                    }
+                }
+                <td>
+                    <a asp-controller="clinicSpecifications" asp-action="updateData" asp-area="secretaryPanel" asp-route-id="@item.clinicSpecificationsID" class="btn btn-sm btn btn-warning">ویرایش</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

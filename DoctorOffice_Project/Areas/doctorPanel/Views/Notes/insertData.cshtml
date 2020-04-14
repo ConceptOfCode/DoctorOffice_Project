@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewData["Title"] = "insertData";
+    Layout = "~/Areas/doctorPanel/Views/Shared/_doctorLayout.cshtml";
+}
+
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-right">
+        <div class="alert alert-primary">
+            <h3 class="text-muted">اضافه کردن یاداشت جدید</h3>
+        </div>
+        <hr>
+        <form action="/DoctorPanel/insertNote" method="post">
+
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+
+                        <input class="form-control" type="text" name="turnsID" id="turnsID" value="@ViewBag.turnsID" hidden>
+
+                        <label>عنوان یاداشت : </label> <input type="text" name="titleNote" id="titleNote"
+                                                              class="form-control">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                        <label>متن کامل یاداشت : </label>
+                        <textarea name="fullTextNote" id="fullTextNote" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <section class="container" id="medicineButtons">
+                <input type="submit" id="Save" value="ذخیره" class="btn btn-success btn-sm">
+                <a id="Cancel" class="btn btn-danger btn-sm">انصراف</a>
+            </section>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿
+@model IEnumerable<Services>
+
+<section class="services-section spad" id="clinicServices">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>خدمات ما</h2>
+        </div>
+        <div class="row text-right" dir="rtl">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 service text-right" dir="rtl">
+                    <div class="service-content">
+                        <h4>@item.Title</h4>
+                        <p>
+                            @item.fullTextServices
+                        </p>
+                    </div>
+                    <div class="service-icon text-right" dir="rtl">
+                        <i class="flaticon-020-decay"></i>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</section>

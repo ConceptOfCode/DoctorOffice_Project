@@ -1,0 +1,328 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Services\\DoctorOffice.Services.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.DataLayer\\DoctorOffice.DataLayer.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.DataLayer\\DoctorOffice.DataLayer.csproj",
+        "projectName": "DoctorOffice.DataLayer",
+        "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.DataLayer\\DoctorOffice.DataLayer.csproj",
+        "packagesPath": "C:\\Users\\HamidS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.DataLayer\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HamidS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Domains\\DoctorOffice.Domains.csproj": {
+                "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Domains\\DoctorOffice.Domains.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Pomelo.EntityFrameworkCore.MySql": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Domains\\DoctorOffice.Domains.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Domains\\DoctorOffice.Domains.csproj",
+        "projectName": "DoctorOffice.Domains",
+        "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Domains\\DoctorOffice.Domains.csproj",
+        "packagesPath": "C:\\Users\\HamidS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Domains\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HamidS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNet.Identity.EntityFramework": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ExtensionMethods\\DoctorOffice.ExtensionMethods.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ExtensionMethods\\DoctorOffice.ExtensionMethods.csproj",
+        "projectName": "DoctorOffice.ExtensionMethods",
+        "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ExtensionMethods\\DoctorOffice.ExtensionMethods.csproj",
+        "packagesPath": "C:\\Users\\HamidS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ExtensionMethods\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HamidS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Services\\DoctorOffice.Services.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Services\\DoctorOffice.Services.csproj",
+        "projectName": "DoctorOffice.Services",
+        "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Services\\DoctorOffice.Services.csproj",
+        "packagesPath": "C:\\Users\\HamidS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Services\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HamidS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.DataLayer\\DoctorOffice.DataLayer.csproj": {
+                "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.DataLayer\\DoctorOffice.DataLayer.csproj"
+              },
+              "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Domains\\DoctorOffice.Domains.csproj": {
+                "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.Domains\\DoctorOffice.Domains.csproj"
+              },
+              "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ExtensionMethods\\DoctorOffice.ExtensionMethods.csproj": {
+                "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ExtensionMethods\\DoctorOffice.ExtensionMethods.csproj"
+              },
+              "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ViewModels\\DoctorOffice.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ViewModels\\DoctorOffice.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ViewModels\\DoctorOffice.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ViewModels\\DoctorOffice.ViewModels.csproj",
+        "projectName": "DoctorOffice.ViewModels",
+        "projectPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ViewModels\\DoctorOffice.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\HamidS\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\HamidS\\source\\repos\\DoctorOffice_Project\\DoctorOffice.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\HamidS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

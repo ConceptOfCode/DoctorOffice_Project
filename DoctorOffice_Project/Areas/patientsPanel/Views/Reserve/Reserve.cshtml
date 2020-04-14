@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Reserve";
+    Layout = "~/Areas/patientsPanel/Views/Shared/_patientsLayout.cshtml";
+}
+
+
+<div class="jumbotron jumbotron-fluid">
+    <form action="">
+        <div class="row " id="folderPatients">
+            <div class="col-xl-12">
+                <div class="col-xl-6 float-left offset-xl-3 text-right" id="folderContent">
+                    <section class="alert alert-primary col-xl-12 text-center" style="margin-top: 2em;">
+                        <h4>اطلاعات زیر را بادقت پر کنید</h4>
+                    </section>
+                    <label>شماره ملی : </label>
+                    <input type="text" name="nayionalNumber" id="" class="form-control">
+                    <label>نام خانوادگی : </label>
+                    <input type="text" name="fullName" id="" class="form-control">
+                    <label>تاریخ رزرو : </label>
+                    <input type="text" name="reserveDate" id="" class="form-control">
+                    <label>دکتر مورد نظر : </label>
+                    <select name="patientsDoctorsList" id="patientsDoctorsList" class="form-control">
+                        <option value="دکتر حسین سلامی"></option>
+                        <option value="دکتر محند علی"></option>
+                    </select>
+                    <label>توضیحات : </label>
+                    <textarea name="descriptions" id="descriptions" cols="30" rows="4" class="form-control">
+
+          </textarea>
+
+                    <div id="folderBtn" class="text-center">
+                        <input type="submit" value="ذخیره" class="btn btn-success">
+                        <button class="btn btn-danger">انصراف</button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    </form>
+</div>
+

@@ -1,0 +1,74 @@
+﻿
+@inject IClinicOpeningHoursRepository clinicOpeningRepository
+
+@{
+    var informationBar = await clinicOpeningRepository.headerInformationsSite();
+}
+
+
+<header class="header-section">
+    <div class="container">
+        <!-- Site Logo -->
+        <a href="index.html" class="site-logo">
+            <img src="img/logo.png" alt="" />
+        </a>
+        <!-- responsive -->
+        <div class="nav-switch">
+            <i class="fa fa-bars"></i>
+        </div>
+        <!-- Main Menu -->
+        <ul class="main-menu">
+            <!-- <li><a href="elements.html"><i class="flaticon-020-decay"></i></a></li> -->
+            <li><a href="#">تماس با ما</a></li>
+            <li><a href="#">درباره ما</a></li>
+            <!-- <li><a href="blog.html">وبلاگ</a></li> -->
+            <li><a href="ReservePage.html">رزرو نوبت</a></li>
+            <li><a href="loginPage.html">ورود به حساب کاربری</a></li>
+            <li><a href="Register.html">تشکیل پرونده</a></li>
+            <li class="active"><a href="index.html">خانه</a></li>
+        </ul>
+    </div>
+
+    <div class="header-info">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 hi-item">
+                    <div class="hs-icon">
+                        <img src="img/icons/map-marker.png" alt="" />
+                    </div>
+                    <div class="hi-content">
+                        <h6>نشانی مطب</h6>
+                        <p>@informationBar.shortAddress</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 hi-item">
+                    <div class="hs-icon">
+                        <img src="img/icons/clock.png" alt="" />
+                    </div>
+                    <div class="hi-content">
+                        <h6>ساعت کاری</h6>
+                        <p><a href="" class="">مشاهده ساعات کاری</a></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 hi-item">
+                    <div class="hs-icon">
+                        <img src="img/icons/phone.png" alt="" />
+                    </div>
+                    <div class="hi-content">
+                        <h6>شماره تماس</h6>
+                        <p>@informationBar.clinicPhone</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 hi-item">
+                    <div class="hs-icon">
+                        <img src="img/icons/calendar.png" alt="" />
+                    </div>
+                    <div class="hi-content">
+                        <h6>تاریخ امروز</h6>
+                        <p>@informationBar.currentDateTime</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

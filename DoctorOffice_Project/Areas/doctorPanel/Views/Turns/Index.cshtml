@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/doctorPanel/Views/Shared/_doctorLayout.cshtml";
+}
+
+
+<div class="row" id="searchField">
+    <section class="col-lg-2 col-md-2 col-sm-2 col-xl-2">
+        <section class="row">
+            <section class="col-lg-6 col-md-6 col-sm-6 col-xl-6">
+                <label>تاریخ :</label>
+            </section>
+        </section>
+    </section>
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-center">
+        <input type="text" class="form-control" id="TurnsDateBoxSearch" placeholder="تاریخ را وارد کنید ...">
+    </section>
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-right">
+        <a id="TurnssearchButton" class="btn btn-success">جست و جو</a>
+    </section>
+</div>
+
+<table id="reserveList" class="table table-hover table-bordered">
+    <thead class="thead-dark">
+    <th>کد رهگیری</th>
+    <th>تاریخ رزرو</th>
+    <th>تاریخ امروز</th>
+    <th>مشخصات دکتر</th>
+    <th>عملیات</th>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.turnsID</td>
+                <td>@item.reserveDate</td>
+                <td>@DateTime.Now.toShamsi()</td>
+                <td>@item.doctorFullName</td>
+                <td>
+                    <a asp-controller="Turns" asp-action="Details" asp-area="doctorPanel" asp-route-id="@item.turnsID" class="btn btn-sm btn btn-primary">جزییات</a>
+                    <a asp-controller="Notes" asp-action="insertData" asp-area="doctorPanel" asp-route-turnsID="@item.turnsID" class="btn btn-warning btn-sm">ثبت یاداشت</a>
+                    <a asp-controller="Prescription" asp-action="insertData" asp-area="doctorPanel" asp-route-turnsID="@item.turnsID" class="btn btn-success btn-sm">ثبت نسخه</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@section ScriptsOnViews{
+    <script src="~/js/SecretaryTurnsScript.js"></script>
+}
+

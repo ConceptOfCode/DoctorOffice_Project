@@ -1,0 +1,26 @@
+﻿
+@model DoctorPanelDetailsViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/patientsPanel/Views/Shared/_patientsLayout.cshtml";
+}
+
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-right">
+            <h3 class="text-muted">@Model.noteTitle</h3>
+            <label class="text-primary">کد رهگیری نوبت :</label> <label>@Model.TurnsID</label><br>
+            <label class="text-primary">تاریخ ثبت : </label> <label>@Model.createDateTime</label><br>
+            <label class="text-primary">مشخصات دکتر :</label> <label>@Model.doctorFullName</label>
+            <hr>
+            <p>@Model.fullNoteText</p>
+        </div>
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                <a asp-controller="Notes" asp-action="Index" asp-area="patientsPanel" class="btn btn-primary">تاييد و بازگشت</a>
+            </div>
+        </div>
+    </div>
+
+

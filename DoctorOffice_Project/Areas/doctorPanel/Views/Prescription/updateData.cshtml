@@ -1,0 +1,74 @@
+﻿
+
+@model IEnumerable<DoctorPanelEditPrescriptionViewModel>
+
+@{
+    ViewData["Title"] = "updateData";
+    Layout = "~/Areas/doctorPanel/Views/Shared/_doctorLayout.cshtml";
+    int counter = 0;
+}
+
+
+<!--در اینجا من فقط یک بار برای هر دارو با طریقه مصرفش فیلد میزنم ولی تو باید با استفاده از
+     یک کوئری به بانک بفهمی که چند تا دارو ثبت شده و هی اینو تکرار و با مقدار کارنت پرش کنی-->
+
+<form action="/DoctorPanel/EditPrescriptions" method="post">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container text-right">
+            <div class="alert alert-primary">
+                <h3 class="text-muted">ویرایش نسخه ی بیماران </h3>
+                <label class="text-primary">کد رهگیری نوبت :</label> <label>@Model.First().turnsID</label><br>
+                <label class="text-primary">نام و نام خانوادگی بیمار : </label> <label>@Model.First().patientFullName</label><br>
+                <label class="text-primary">شماره ملی بیمار : </label> <label>@Model.First().patientNationalID</label><br>
+                <label class="text-primary">مشخصات دکتر :</label> <label>@Model.First().doctorFullName</label>
+            </div>
+            <hr>
+            <div id="contentPrciepts" class="row container">
+                <section class="col-xl-4">
+                    <h3 class="text-muted">جزییات دارو را وارد کنید</h3>
+                </section>
+                <!--float-left offset-xl-3 offset-lg-3 offset-sm-3 offset-md-3-->
+
+
+                @foreach (var item in Model)
+                {
+                    <input type="text" name="medicines[@counter].prescriptionID" value="@item.doctorPrescriptionID" hidden />
+                    <input type="text" name="medicines[@counter].medicineID" value="@item.medicineID" hidden />
+                    <input type="text" name="medicines[@counter].howUseID" value="@item.howUsesID" hidden />
+
+                    <div class="row col-xl-12" id="contentMedicine">
+                        <div id="enterMedicine" class="row col-xl-6 col-md-6 col-sm-6 col-lg-6">
+                            <input type="text" name="medicines[@counter].turnsID" id="" value="@item.turnsID" hidden>
+                            <label>نام دارو : </label><input type="text" name="medicines[@counter].medicineName" id="" value="@item.medicineName" class="form-control">
+                            <label>طریقه مصرف دارو : </label><textarea name="medicines[@counter].howUseText" id="" cols="30" rows="10"
+                                                                       class="form-control">@item.howUsesFullText</textarea>
+                            <section class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input type="text" name="medicines[@counter].fromDate" id="fromDate" class="form-control" value="@item.fromDate" placeholder="از تاریخ : ">
+                            </section>
+                            <section class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <input type="text" name="medicines[@counter].toDate" id="toDate" class="form-control" value="@item.toDate" placeholder="تا تاریخ : ">
+                            </section>
+                        </div>
+                        <div class="col-xl-6">
+
+                        </div>
+                    </div>
+
+                    @(counter++)
+                }
+
+
+
+            </div>
+            <section class="container" id="medicineButtons">
+                <input type="submit" id="Save" value="ذخیره" class="btn btn-success btn-sm">
+                <a asp-controller="Prescription" asp-action="Index" asp-area="doctorPanel" id="Cancel" class="btn btn-danger btn-sm">انصراف</a>
+            </section>
+        </div>
+    </div>
+</form>
+
+
+@section ScriptsOnViews{
+    <script src="/js/medicineScript.js"></script>
+}

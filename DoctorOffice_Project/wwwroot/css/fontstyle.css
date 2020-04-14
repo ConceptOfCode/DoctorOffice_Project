@@ -1,0 +1,429 @@
+﻿@import url(fontiran.css);
+
+/* لینک فایلی که وظیفه بارگذاری فونت ها را برعهده دارد */
+body {
+    font-family: IRANSans !important;
+    font-weight: 300;
+    direction: rtl;
+    background: #eee;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+label,
+button,
+li,a,
+textarea {
+    font-family: IRANSans !important;
+}
+
+.margin-top-2{
+    margin-top:2em;
+}
+
+#Lbl_currentUser{
+    margin:0px !important;
+    padding:0px;
+}
+
+.getFont {
+    font-family: IRANSans !important;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+#registerUsers{
+    margin-top:1.2em !important;
+}
+
+#reserveDetailsButtons {
+    margin-top: 3em;
+}
+
+#serviceAttention {
+    margin-top: 80px !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+.sidebar {
+    height: 100vh;
+    background: linear-gradient(rgba(25, 153, 204, 0.7), rgba(25, 153, 204, 0.7)), url('../img/923048-download-free-dentist-wallpapers-2198x1706-notebook.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 5px 7px 25px #999;
+}
+
+.bottom-border {
+    border-bottom: 1px groove #eee;
+}
+
+.sidebar-link {
+    transition: all .4s;
+}
+
+    .sidebar-link:hover {
+        background-color: #444;
+        border-radius: 5px;
+    }
+
+#top_nav {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 6px 15px -11px black;
+}
+
+.current {
+    background: #ffffff;
+    border-radius: 7px;
+    box-shadow: 0px 5px 5px -2px #111;
+    transition: all .3s;
+    color: gray;
+}
+
+    .current:hover {
+        background: #bbbbbb;
+        border-radius: 7px;
+        transform: translateY(-1px);
+    }
+
+#Profile {
+    height: 800px;
+    margin-top: 60px !important;
+    background-color: rgba(243, 243, 243,0.2);
+}
+
+#buttons {
+    margin-top: 300px;
+}
+
+#fieldsRight input, label {
+    margin-top: 40px !important;
+}
+
+#fieldsLeft input, label {
+    margin-top: 40px !important;
+}
+
+#Profile #right {
+    height: 800px;
+}
+
+#line {
+    height: 1px;
+    width: 100%;
+    border-bottom: black;
+}
+
+#Profile #right h4 {
+    margin-top: 65px;
+}
+
+#Profile #right input {
+    margin-top: 69px;
+}
+
+#Profile #left {
+    height: 800px;
+}
+
+#img {
+    height: 200px;
+}
+
+    #img img {
+        max-width: 65%;
+        max-height: 200px;
+    }
+
+main {
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+#Content {
+    height: 585px;
+}
+
+.search-input {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    border-bottom: 2px solid #999 !important;
+    transition: all .4s !important;
+}
+
+    .search-input:focus {
+        background: transparent !important;
+        box-shadow: none !important;
+        border-block-end: 2px solid #dc3545 !important;
+    }
+
+.search-button {
+    border-radius: 50% !important;
+    padding: 10px 16px !important;
+    transition: all .4s !important;
+}
+
+    .search-button:hover {
+        background-color: #eee !important;
+        transform: translateY(-1px) !important;
+    }
+
+.icon-parent {
+    position: relative;
+}
+
+    .icon-parent::after {
+        content: "";
+        position: absolute;
+        top: 7px;
+        left: 15px;
+        height: 12px;
+        width: 12px;
+        background-color: #f44336;
+        border-radius: 50%;
+    }
+
+@media(max-width: 768px) {
+    .sidebar {
+        position: static !important;
+        height: auto;
+    }
+
+    .top-navbar {
+        position: static !important;
+    }
+}
+
+/* end of navbar */
+/* card */
+.card-common {
+    box-shadow: 1px 2px 5px #999;
+    transition: all .4s;
+}
+
+    .card-common:hover {
+        box-shadow: 2px 3px 15px #999;
+        transform: translateY(-1px);
+    }
+
+@media(max-width: 990px) {
+    .text-md-small {
+        font-size: 1.5rem;
+    }
+}
+/* end of card */
+/* task list */
+.task-border {
+    border-right: 3px solid #f66436;
+}
+/* end of task list */
+#reserveList {
+    box-shadow: 0px 4px 14px -10px black;
+    direction: rtl;
+    text-align: right;
+}
+
+    #reserveList tr {
+        height: 4rem;
+    }
+
+        #reserveList tr:nth-child(odd) {
+            background-color: rgba(25, 153, 204, 0.2);
+        }
+
+        #reserveList tr:nth-child(even) {
+            background-color: rgba(202, 202, 202,0.1);
+        }
+
+    #reserveList thead {
+        opacity: 0.9;
+    }
+
+    #reserveList tbody tr td:last-child a {
+        color: rgb(255, 255, 255) !important;
+        cursor: pointer;
+    }
+
+#searchField {
+    height: 6em;
+    margin: 3em auto;
+    box-shadow: 0px 3px 14px -15px black;
+    border-radius: 10px;
+    border: 1px solid rgba(180, 180, 180, 0.233);
+}
+
+#dateBox, #searchContent, #TurnsDateBoxSearch {
+    margin: 2em auto !important;
+}
+
+#searchButton, #TurnssearchButton {
+    margin: 2em auto !important;
+    color: white;
+}
+/*endReserveListCSS*/
+
+/*reserveDetails*/
+#reserveDetails {
+    /*height: 7em;*/
+    background-color: rgba(25, 153, 204, 0.2);
+    margin: 2rem auto;
+    border: 2px solid steelblue;
+    border-radius: 10px;
+    box-shadow: 0px 2px 15px -6px black;
+}
+
+#detailRight label {
+    border-bottom: 2px solid steelblue;
+}
+
+#detailLeft {
+    padding-top: 1.1em;
+}
+
+#head {
+    margin-top: 5em;
+    margin-bottom: 0px;
+}
+/*endReserveDetails*/
+
+/*notesStyles*/
+#notes {
+    margin: 4em auto;
+}
+/*endNotes*/
+
+/*patientsFolder*/
+#folderPatients {
+    margin-top: 5em;
+}
+
+#folderBtn {
+    margin-top: 4em;
+}
+
+#folderContent {
+    border: 2px solid rgba(86, 156, 248, 0.5);
+    border-radius: 12px;
+    box-shadow: 0px 5px 14px -8px black;
+}
+
+/*endpatientsFolder*/
+
+/*medicin*/
+#medicineButtons {
+    margin-top: 1.5em;
+    color: white;
+}
+
+#medicineFinalList {
+    box-shadow: 0px 4px 14px -10px black;
+    direction: rtl;
+    text-align: right;
+}
+
+
+    #medicineFinalList tr:nth-child(even) {
+        background-color: rgba(202, 202, 202,0.1);
+    }
+
+    #medicineFinalList thead {
+        opacity: 0.9;
+    }
+
+#resultTable {
+    margin: 3em auto;
+    padding: 1.3em;
+    border: 2px solid rgba(51, 51, 51, 0.5);
+    border-radius: 20px;
+    box-shadow: 0px 5px 10px -6px black;
+}
+/*endMedicin*/
+
+/*notelist*/
+#noteList {
+    margin-top: 4em;
+    box-shadow: 0px 4px 14px -10px black;
+    direction: rtl;
+    text-align: right;
+}
+
+    #noteList tr {
+        height: 4rem;
+    }
+
+        #noteList tr:nth-child(odd) {
+            background-color: rgba(25, 153, 204, 0.2);
+        }
+
+        #noteList tr:nth-child(even) {
+            background-color: rgba(202, 202, 202,0.1);
+        }
+
+    #noteList thead {
+        opacity: 0.9;
+    }
+
+    #noteList tbody tr td:last-child a {
+        color: rgb(255, 255, 255) !important;
+        cursor: pointer;
+    }
+/*endNoteList*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+
+
+body {
+    margin: 0;
+    font-size: .9rem;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #212529;
+    text-align: left;
+    background-color: #f5f8fa;
+}
+
+.navbar-laravel {
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
+}
+
+.navbar-brand, .nav-link, .my-form, .login-form {
+    font-family: Raleway, sans-serif;
+}
+
+.my-form {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+    .my-form .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+.login-form {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.margin-top-2-3{
+    margin-top:2.3em !important;
+}

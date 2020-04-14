@@ -1,0 +1,33 @@
+﻿
+@model SecretaryreserveDetails_ViewModel
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/secretaryPanel/Views/Shared/_secretaryLayout.cshtml";
+}
+
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-right">
+        <div class="alert alert-primary">
+            <h1 class="display-4 ">جزییات لیست رزرو کننده گان</h1>
+        </div>
+        <label class="text-primary" dir="rtl">نام و نام خانوادگی : </label> <label dir="rtl">@Model.fullNamePatient</label><br>
+        <label class="text-primary" dir="rtl">شماره شناسنامه : </label> <label dir="rtl">@Model.nationalNumber</label><br>
+        <label class="text-primary" dir="rtl">نام پدر : </label> <label dir="rtl">@Model.fatherName</label><br>
+        <label class="text-primary" dir="rtl">تاریخ تولد : </label> <label dir="rtl">@Model.birthDate</label><br>
+        <label class="text-primary" dir="rtl">شماره تلفن : </label> <label dir="rtl">@Model.phoneNumber</label><br>
+        <label class="text-primary" dir="rtl">پست الکترونیک : </label> <label dir="rtl">@Model.Email</label><br>
+        <label class="text-primary" dir="rtl">تاریخ رزرو : </label> <label dir="rtl">@Model.reserveDate</label><br>
+        <label class="text-primary" dir="rtl">تاریخ امروز : </label> <label dir="rtl">@Model.currentDate</label><br>
+    </div>
+
+    <div class="row" dir="ltr" id="reserveDetailsButtons">
+        <div class="col-md-6 offset-5">
+            <div class="col-md-6">
+                <a asp-controller="Turns" asp-action="Index" asp-area="secretaryPanel" class="btn btn-primary">تایید و بازگشت</a>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,59 @@
+﻿
+@model Tuple<string[], string, string, IEnumerable<Services>>
+
+<section id="footer" class="footer-top-section set-bg" data-setbg="img/footer-bg.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="footer-widget">
+                    <div class="fw-about">
+                        <img src="img/logo-light.png" alt="" />
+                        <p>
+                            ما در این درمانگاه در تلاشیم با استفاده از امکانات روز دنیا و همچنین پزشکانی مجرب درمانی بسیار بسیار عالی را برای مریضان فراهم آوریم
+                            و همچنین امیدواریم امکانات و خدمات ما برای مریضان قابل قبول و همچنین کارامد بوده باشد
+                        </p>
+                        <div class="fw-social">
+                            <a href=""><i class="fa fa-pinterest"></i></a>
+                            <a href=""><i class="fa fa-facebook"></i></a>
+                            <a href=""><i class="fa fa-twitter"></i></a>
+                            <a href=""><i class="fa fa-dribbble"></i></a>
+                            <a href=""><i class="fa fa-behance"></i></a>
+                            <a href=""><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-5">
+                <div class="footer-widget">
+                    <div class="fw-links">
+                        <h5 class="fw-title">خدمات ما</h5>
+                        <ul>
+                            @foreach (var item in Model.Item4)
+                            {
+                                <li><a href="#clinicServices">@item.Title</a></li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 col-md-7">
+                <div class="footer-widget">
+                    <div class="fw-timetable">
+                        <div class="fw-title">ساعات کاری</div>
+                        <div class="timetable-content">
+                            <table>
+                                @foreach (var item in Model.Item1)
+                                {
+                                    <tr>
+                                        <td>@item</td>
+                                        <td>@Model.Item2 صبح  - @Model.Item3 بعد از ظهر</td>
+                                    </tr>
+                                }
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

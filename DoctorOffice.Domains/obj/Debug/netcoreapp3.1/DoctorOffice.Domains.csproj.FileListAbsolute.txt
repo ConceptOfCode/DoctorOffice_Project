@@ -1,0 +1,8 @@
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Domains\bin\Debug\netcoreapp3.1\DoctorOffice.Domains.deps.json
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Domains\bin\Debug\netcoreapp3.1\DoctorOffice.Domains.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Domains\bin\Debug\netcoreapp3.1\DoctorOffice.Domains.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Domains\obj\Debug\netcoreapp3.1\DoctorOffice.Domains.AssemblyInfoInputs.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Domains\obj\Debug\netcoreapp3.1\DoctorOffice.Domains.AssemblyInfo.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Domains\obj\Debug\netcoreapp3.1\DoctorOffice.Domains.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Domains\obj\Debug\netcoreapp3.1\DoctorOffice.Domains.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Domains\obj\Debug\netcoreapp3.1\DoctorOffice.Domains.csprojAssemblyReference.cache

@@ -1,0 +1,142 @@
+﻿
+@model Employees
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/doctorPanel/Views/Shared/_doctorLayout.cshtml";
+}
+
+<div class="jumbotron jumbotron-fluid">
+    @if (ViewBag.Status.ToString() == "error")
+    {
+        <div class="alert alert-danger text-center">
+            <h4>شما اطلاعات خود را هنوز به ثبت نرسانده اید.</h4>
+        </div>
+    }
+    <form id="empForm" method="post" action="" onsubmit="return isSuccess;" enctype="multipart/form-data">
+
+        <input type="text" id="returnUrl" name="returnUrl" value="/DoctorPanel/Profile" hidden/>@*چون ما داریم درخواست به یک سرویس دیگر در یک جای دیگر میدهیم پس آدرس خودمون هم برای باز گشت رو میدیم*@
+
+        <input type="text" id="employeeID" name="employeeID" value="@if (Model != null) { @Model.employeeID; }" hidden />
+        <div class="row">
+            <div id="Profile" class="col-md-11 mr-lg-5">
+                <div class="row">
+                    <div id="right" class="col-md-6 col-lg-6 text-center">
+                        <div>
+                            <h4>تغییر اطلاعات شخصی</h4>
+                            <input class="form-control" type="file" name="imgUp" id="">
+                            <hr>
+                        </div>
+                        <div id="fieldsRight">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="col-sm-3" for="x">نام</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="text" name="firstName" id="" value="@if (Model != null) { @Model.firstName; } ">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="col-sm-3" for="x">نام خانوادگی</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="text" name="lastName" id="" value="@if (Model != null) { @Model.lastName; }">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="col-sm-3" for="x">نام پدر</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="text" name="fatherName" id="" value="@if (Model != null) { @Model.fatherName; }">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="col-sm-3" for="x">شماره ملی</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="text" name="nationalNumber" id="nationalNumber" value="@if (Model != null) { @Model.nationalNumber; }">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="col-sm-3" for="x">تاریخ تولد</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="text" name="birthDate" id="" value="@if (Model != null) { @Model.birthDate; }">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="left" class="col-md-6 col-lg-6">
+                        <div id="img" class="col-md-12">
+                            <img class="img-thumbnail" src="~/uploadImages/@if (Model != null) { @Model.imageName; }" alt="profileImage">
+                        </div>
+                        <hr>
+                        <div id="fieldsLeft">
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="col-sm-3" for="x">شماره تلفن</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="tel" name="phoneNumber" id="" value="@if (Model != null) { @Model.phoneNumber; }">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <label class="col-sm-3" for="x">ایمیل</label>
+                                </div>
+                                <div class="col-md-9">
+                                    <input class="form-control" type="text" name="Email" id="Email" value="@User.Identity.Name">
+                                </div>
+                            </div>
+
+
+                            <div id="buttons" class="row">
+                                <div class="col-md-12 text-center">
+                                    <input id="save" type="submit" value="ذخیره" class="btn btn-success">
+                                    <input type="submit" value="انصراف" class="btn btn-danger">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+<div class="modal" tabindex="-1" role="dialog" id="Modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-right" id="headerModal" dir="rtl">
+                <h5 class="modal-title" id="ModalTitle">Modal title</h5>
+                @*<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>*@
+            </div>
+            <div class="modal-body text-right" id="ModalBody">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section ScriptsOnViews{
+    <script src="~/js/SecretaryEmployeeScripts.js"></script>
+}
+

@@ -1,0 +1,96 @@
+﻿
+@model IEnumerable<Services>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/secretaryPanel/Views/Shared/_secretaryLayout.cshtml";
+}
+
+<div class="alert alert-success marginTop text-right" id="serviceAttention">
+    <h4>توجه : </h4>
+    <ul>
+        <li>شما فقط میتوانید 6 عدد از خدمات مطب را به نمایش بگذارید</li>
+        <li>برای تغییر سرویس میتوانید آنرا ویرایش کنید</li>
+        <li>برای حذف همان سرویس را غیر فعال کنید</li>
+    </ul>
+</div>
+
+<div class="row">
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-right">
+        <a asp-controller="Services" asp-action="insertData" asp-area="secretaryPanel" id="searchButton" class="btn btn-success">ایجاد خدمت جدید</a>
+    </section>
+</div>
+
+<table id="reserveList" class="table table-hover table-bordered">
+    <thead class="thead-dark">
+    <th>شناسه</th>
+    <th>عنوان</th>
+    <th>توضیح</th>
+    <th>قابل نمایش</th>
+    <th>ترتیب</th>
+    <th>عملیات</th>
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ServicesID</td>
+                <td>@item.Title</td>
+                <td>@item.fullTextServices</td>
+                @{if (item.showInPage)
+                    {
+                        <td>فعال</td>
+                    }
+                    else
+                    {
+                        <td>غیرفعال</td>
+                    }
+                }
+                <td>@item.Order</td>
+                <td>
+                    <a class="btn btn-sm btn btn-warning" asp-controller="Services" asp-action="updateData" asp-area="secretaryPanel" asp-route-id="@item.ServicesID">ویرایش</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<!--<div class="modal fade text-right" tabindex="-1" role="dialog" id="Modal" dir="rtl">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content text-right">
+            <div class="modal-header text-center" id="headerModal">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title text-right" id="ModalTitle">Modal title</h4>
+            </div>
+            <div class="modal-body text-right" id="ModalBody">
+               
+            </div>
+            <div class="modal-footer text-right">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div><!-- /.modal-content 
+    </div><!-- /.modal-dialog 
+</div><!-- /.modal -->
+
+@*<div class="modal" tabindex="-1" role="dialog" id="Modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" id="headerModal">
+                <h5 class="modal-title" id="ModalTitle">Modal title</h5>
+                @*<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="ModalBody">
+                
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">می پذیرم</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+            </div>
+        </div>
+    </div>
+</div>
+    *@

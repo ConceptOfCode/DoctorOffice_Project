@@ -1,0 +1,128 @@
+﻿
+@{
+    ViewData["Title"] = "createpatients";
+    Layout = "~/Views/Shared/_defaultLayout.cshtml";
+}
+
+@section StylesOnViews{ 
+    <link href="~/css/RegistrationStyles.css" rel="stylesheet" />
+}
+
+<section class="page-info-section set-bg" id="info" data-setbg="img/page-info-bg/1.jpg">
+    <div class="container">
+        <h2 class="text-right" dir="rtl">تشکیل پرونده کاربران</h2>
+    </div>
+</section>
+
+<div id="folderContent">
+    <div class="container" dir="auto">
+        <form id="MainForm" method="POST" class="form-horizontal" role="form" onsubmit="return isValid">
+            <h3 id="title" class="text-center">اطلاعات زیر را با دقت پر کنید</h3>
+            <div class="form-group text-right" dir="rtl">
+                <label for="firstName" class="col-sm-3 control-label">نام</label>
+                <div class="col-sm-9">
+                    <input type="text" name="firstName" id="firstName" class="form-control" autofocus>
+                    <span class="text-danger">لطفا نام خود را وارد کنید</span>
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <label for="lastName" class="col-sm-3 control-label">نام خانوادگی</label>
+                <div class="col-sm-9">
+                    <input type="text" name="lastName" id="lastName" class="form-control" autofocus>
+                    <span class="text-danger">لطفا نام خانوادگی خود را وارد کنید</span>
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <label for="lastName" class="col-sm-3 control-label">نام پدر</label>
+                <div class="col-sm-9">
+                    <input type="text" name="fatherName" id="fatherName" class="form-control" autofocus>
+                    <span class="text-danger">لطفا نام پدر خود را وارد کنید</span>
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <label for="NumberReg" class="col-sm-3 control-label">شماره شناسنامه </label>
+                <div class="col-sm-9">
+                    <input type="text" name="nationalNumber" id="nationalNumber" class="form-control">
+                    <span class="text-danger">لطفا شماره ملی خود را وارد کنید</span>
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <label for="birthDate" class="col-sm-3 control-label">تاریخ تولد</label>
+                <div class="col-sm-9">
+                    <input type="text" name="birthDate" id="birthDate" class="form-control">
+                    <span class="text-danger">لطفا تاریخ تولد خود را وارد کنید</span>
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <label for="phoneNumber" class="col-sm-3 control-label">شماره تلفن</label>
+                <div class="col-sm-9">
+                    <input type="phoneNumber" name="phoneNumber" id="phoneNumber" class="form-control">
+                    <span class="text-danger">لطفا شماره تلفن خود را وارد کنید</span>
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <label for="email" class="col-sm-3 control-label">پست الکترونیک</label>
+                <div class="col-sm-9">
+                    <input type="email" id="Email" class="form-control" name="Email">
+                    <!-- <span class="text-danger">لطفا پست الکترونیک خود را وارد کنید</span> -->
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <label for="password" class="col-sm-3 control-label">رمز عبور شما</label>
+                <div class="col-sm-9">
+                    <input type="password" name="Password" id="Password" class="form-control">
+                </div>
+            </div>
+            <div class="form-group text-right">
+                <label for="password" class="col-sm-3 control-label">تکرار رمز عبور</label>
+                <div class="col-sm-9">
+                    <input type="password" id="confpassword" class="form-control">
+                </div>
+            </div>
+            <!-- <div class="form-group">
+                    <label for="Certificate" class="col-sm-3 control-label">مقطع* </label>
+                <div class="col-sm-9">
+                    <select class="form-control" name="Certificate">
+                        <option>کاردانی</option>
+                        <option>کارشناسی</option>
+                        <option>کارشناسی ارشد</option>
+                        <option>دکتری</option>
+                    </select>
+                </div>
+            </div> -->
+            <!-- <div class="form-group">
+                <label class="control-label col-sm-3">جنسیت</label>
+                <div class="col-sm-6">
+                    <div class="row">
+                        <div class="col-md-9">
+                                    <select class="form-control" name="Gender">
+                                            <option>مرد</option>
+                                            <option>خانم</option>
+                                     </select>
+                        </div>
+                    </div>
+                </div>
+            </div>  -->
+            <!-- /.form-group -->
+            <div class="form-group text-right">
+                <label for="birthDate" class="col-sm-3 control-label">تصویر</label>
+                <div class="col-sm-9">
+                    <input type="file" name="imageName" id="imageName" class="form-control">
+                </div>
+            </div>
+            <div class="form-group">
+
+            </div>
+            <input id="Save" value="ثبت نام" type="submit" class="btn btn-success btn-block" />
+            <button href="#" class="btn btn-danger btn-block">انصراف</button>
+        </form>
+        <!-- /form -->
+    </div> <!-- ./container -->
+
+    @section ScriptsOnViews{
+            <script>
+                $('#folderContent').css({ 'background-image': 'url("/img/slide-1.jpg")','background-repeat':'no-repeat','background-attachment':'fixed','background-size':'cover'});
+
+            </script>
+        }
+</div>

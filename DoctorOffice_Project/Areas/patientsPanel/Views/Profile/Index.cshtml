@@ -1,0 +1,108 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/patientsPanel/Views/Shared/_patientsLayout.cshtml";
+    
+}
+    <div class="jumbotron jumbotron-fluid">
+        <form action="/insertProfile" method="post" enctype="multipart/form-data">
+            <div class="row">
+                <div id="Profile" class="col-md-11 mr-lg-5">
+                    <div class="row">
+                        <div id="right" class="col-md-6 col-lg-6 text-center">
+                            <div>
+                                <h4 class="alert alert-primary">تغییر اطلاعات شخصی</h4>
+                                <input class="form-control" type="file" name="imgUp" id="">
+                                <hr>
+                            </div>
+                            <div id="fieldsRight">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="col-sm-3" for="x">نام</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="text" name="firstName" id="">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="col-sm-3" for="x">نام خانوادگی</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="text" name="lastName" id="">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="col-sm-3" for="x">نام پدر</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="text" name="fatherName" id="">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="col-sm-3" for="x">شماره ملی</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="text" name="nationalNumber" id="">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="col-sm-3" for="x">تاریخ تولد</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="text" name="birthDate" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="left" class="col-md-6 col-lg-6">
+                            <div id="img" class="col-md-12">
+                                <img class="img-thumbnail" src="~/img/3.jpg" alt="profileImage">
+                            </div>
+                            <hr>
+                            <div id="fieldsLeft">
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="col-sm-3" for="x">شماره تلفن</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="tel" name="phoneNumber" id="">
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-3">
+                                        <label class="col-sm-3" for="x">ایمیل</label>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input class="form-control" type="text" name="Email" id="">
+                                    </div>
+                                </div>
+
+
+                                <div id="buttons" class="row alert alert-dark">
+                                    <div class="col-md-12 text-center">
+                                        <input type="submit" value="ذخیره" class="btn btn-success" asp-controller="Profile" asp-action="insertData" asp-area="patientsPanel">
+                                        <input type="submit" value="انصراف" class="btn btn-danger">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+
+        

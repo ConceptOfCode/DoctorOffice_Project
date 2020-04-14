@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "insertData";
+    Layout = "~/Areas/secretaryPanel/Views/Shared/_secretaryLayout.cshtml";
+}
+
+<div class="jumbotron jumbotron-fluid">
+    <div class="container text-right">
+        <section class="alert alert-primary">
+            <h3 class="text-muted">درج نشانی و مشخصات مطب</h3>
+        </section>
+        <hr>
+        <form action="/insertClinicSpecifications" method="post">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+
+                        <label>نام کشور : </label> <input type="text" name="countryName" id="countryName"
+                                                          class="form-control">
+                        <label>نام شهر : </label> <input type="text" name="cityName" id="cityName" class="form-control">
+                        <label>نام خیابان : </label> <input type="text" name="streetName" id="streetName"
+                                                            class="form-control">
+                        <label>شماره تلفن : </label> <input type="text" name="clinicPhone" id="clinicPhone"
+                                                            class="form-control">
+                        <label>شماره پلاک : </label> <input type="text" name="clinicPlack" id="clinicPlack"
+                                                            class="form-control">
+                        <div class="row">
+                            <section class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                                <label>روز های کاری : </label>
+                            </section>
+                            <section class="col-xl-1 col-lg-1 col-md-1 col-sm-1">
+                                <label>شنبه</label> <input type="checkbox" name="sat" id="sat">
+                            </section>
+                            <section class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                <label>یکشنبه</label> <input type="checkbox" name="sun" id="sun">
+                            </section>
+                            <section class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                <label>دوشنبه</label> <input type="checkbox" name="mon" id="mon">
+                            </section>
+                            <section class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                <label>سه شنبه</label> <input type="checkbox" name="thu" id="thu">
+                            </section>
+                            <section class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                <label>چهارشنبه</label> <input type="checkbox" name="wen" id="wen">
+                            </section>
+                            <section class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+                                <label>پنجشنبه</label> <input type="checkbox" name="thur" id="thur">
+                            </section>
+                            <section class="col-xl-6">
+                                <button type="button" id="saveAddress" class="btn btn-success">اعمال</button>
+                            </section>
+                        </div>
+                        <textarea readonly name="weekDay" id="weekDay" cols="30" rows="4" class="form-control" placeholder="روز های کاری خود را از منو بالا انتخاب و دکمه اعمال را بزنید"></textarea>
+                        <div class="row">
+                            <section class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <label>ساعت شروع کار مطب : </label> <input type="number" name="startTime" id="startTime"
+                                                                           class="form-control">
+                            </section>
+                            <section class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+                                <label>ساعت اتمام کار مطب : </label> <input type="number" name="endTime" id="endTime" class="form-control">
+                            </section>
+                        </div>
+                        <label>این اطلاعات فعال باشد؟ : </label> <input type="checkbox" name="isActive" id="isActive" value="true">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="col-xl-10 col-lg-10 col-md-10 col-sm-10">
+                        <label>نشانی دقیق : </label>
+                        <textarea name="fullAddress" id="fullAddress" cols="30" rows="4" class="form-control"></textarea>
+                    </div>
+                </div>
+            </div>
+            <section class="container" id="medicineButtons">
+                <input type="submit" id="Save" value="ذخیره" class="btn btn-success btn-sm">
+                <a asp-controller="clinicSpecifications" asp-action="Index" asp-area="secretaryPanel" id="Cancel" class="btn btn-danger btn-sm">انصراف</a>
+            </section>
+        </form>
+    </div>
+</div>
+
