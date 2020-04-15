@@ -151,22 +151,6 @@ namespace DoctorOffice.Services
             }).Where(w => w.PatientNationalID == nationalID));
         }
 
-        public async Task<IEnumerable<PatientsPanelNoteListViewModel>> PatientsSearchNotes()
-        {
-            //توی کنترلر فیلتر شده
-            return await Task.Run(() => db.Notes.Select(s => new PatientsPanelNoteListViewModel()
-            {
-                NoteID = s.noteID,
-                TurnsID = s.turnsID,
-                patientID = s.Turns.Patients.patientsID,
-                patientEmail = s.Turns.Patients.Email,
-                noteTitle = s.titleNote,
-                fullNoteText = s.fullTextNote,
-                doctorFullName = s.Turns.Employees.firstName + " " + s.Turns.Employees.lastName,
-                createDateTime = s.createDate
-            }));
-        }
-
         public async Task<bool> deleteNoteWithTurnsID(int turnsID)
         {
             try

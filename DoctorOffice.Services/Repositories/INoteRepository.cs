@@ -32,7 +32,5 @@ namespace DoctorOffice.Services
         Task<DoctorPanelDetailsViewModel> Details(int id);
 
         Task<IEnumerable<DoctorPanelSearchNotesViewModel>> searchNotes(int nationalID);
-
-        Task<IEnumerable<PatientsPanelNoteListViewModel>> PatientsSearchNotes();
     }
 }

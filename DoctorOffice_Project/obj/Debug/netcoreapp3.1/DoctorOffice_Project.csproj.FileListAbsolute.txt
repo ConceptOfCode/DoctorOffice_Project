@@ -258,3 +258,4 @@ C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\doctorPanel\Views\Prescription\updateData.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\doctorPanel\Views\Profile\Index.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Notes\Details.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Reserve\Details.cshtml.g.cs

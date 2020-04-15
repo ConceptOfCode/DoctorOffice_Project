@@ -21,9 +21,11 @@ namespace DoctorOffice.Services
 
         Task<bool> deleteTurns(int id);
 
-        void saveChanges();
+        Task saveChanges();
 
         Task<IEnumerable<SecretaryReserveList_ViewModel>> getReserveList();
+
+        Task<IEnumerable<PatientReserveList_ViewModel>> getPatientReserveList(string Email);
 
         Task<SecretaryreserveDetails_ViewModel> getDetails(int turnsID);
 

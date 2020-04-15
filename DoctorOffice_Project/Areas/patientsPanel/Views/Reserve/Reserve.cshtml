@@ -1,44 +1,161 @@
 ﻿
+@model Tuple<patients, IEnumerable<Employees>>
+
 @{
     ViewData["Title"] = "Reserve";
     Layout = "~/Areas/patientsPanel/Views/Shared/_patientsLayout.cshtml";
 }
 
 
-<div class="jumbotron jumbotron-fluid">
-    <form action="">
-        <div class="row " id="folderPatients">
-            <div class="col-xl-12">
-                <div class="col-xl-6 float-left offset-xl-3 text-right" id="folderContent">
-                    <section class="alert alert-primary col-xl-12 text-center" style="margin-top: 2em;">
-                        <h4>اطلاعات زیر را بادقت پر کنید</h4>
-                    </section>
-                    <label>شماره ملی : </label>
-                    <input type="text" name="nayionalNumber" id="" class="form-control">
-                    <label>نام خانوادگی : </label>
-                    <input type="text" name="fullName" id="" class="form-control">
-                    <label>تاریخ رزرو : </label>
-                    <input type="text" name="reserveDate" id="" class="form-control">
-                    <label>دکتر مورد نظر : </label>
-                    <select name="patientsDoctorsList" id="patientsDoctorsList" class="form-control">
-                        <option value="دکتر حسین سلامی"></option>
-                        <option value="دکتر محند علی"></option>
-                    </select>
-                    <label>توضیحات : </label>
-                    <textarea name="descriptions" id="descriptions" cols="30" rows="4" class="form-control">
+@*<div class="jumbotron jumbotron-fluid">
+        <form action="">
+            <div class="row " id="folderPatients">
+                <div class="col-xl-12">
+                    <div class="col-xl-6 float-left offset-xl-3 text-right" id="folderContent">
+                        <section class="alert alert-primary col-xl-12 text-center" style="margin-top: 2em;">
+                            <h4>اطلاعات زیر را بادقت پر کنید</h4>
+                        </section>
+                        <label>شماره ملی : </label>
+                        <input type="text" name="nayionalNumber" id="" class="form-control">
+                        <label>نام خانوادگی : </label>
+                        <input type="text" name="fullName" id="" class="form-control">
+                        <label>تاریخ رزرو : </label>
+                        <input type="text" name="reserveDate" id="" class="form-control">
+                        <label>دکتر مورد نظر : </label>
+                        <select name="patientsDoctorsList" id="patientsDoctorsList" class="form-control">
+                            <option value="دکتر حسین سلامی"></option>
+                            <option value="دکتر محند علی"></option>
+                        </select>
+                        <label>توضیحات : </label>
+                        <textarea name="descriptions" id="descriptions" cols="30" rows="4" class="form-control">
 
-          </textarea>
+              </textarea>
 
-                    <div id="folderBtn" class="text-center">
-                        <input type="submit" value="ذخیره" class="btn btn-success">
-                        <button class="btn btn-danger">انصراف</button>
+                        <div id="folderBtn" class="text-center">
+                            <input type="submit" value="ذخیره" class="btn btn-success">
+                            <button class="btn btn-danger">انصراف</button>
+                        </div>
                     </div>
+
+
                 </div>
-
-
             </div>
+
+        </form>
+    </div>*@
+
+
+@section StylesOnViews{
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/img/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/Reservemain.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Reserveutil.css">
+    <!--===============================================================================================-->
+}
+
+
+<div class="">
+    <div class="container-contact1">
+        <div class="contact1-pic js-tilt" data-tilt>
+            <img src="~/img/img-01.png" alt="IMG">
         </div>
 
-    </form>
+        <form action="/PatientsPanel/newReserve" method="post" class="contact1-form validate-form">
+
+            <input type="text" name="PatientID" value="@Model.Item1.patientsID" hidden/>
+
+            <h4 class="contact1-form-title">
+                رزرو نوبت بیماران
+            </h4>
+
+            <div class="wrap-input1 validate-input" data-validate="Name is required">
+                <input class="input1" type="text" name="PatientsFullName" value="@Model.Item1.firstName-@Model.Item1.lastName" placeholder="نام و نام خانوادگی">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input">
+                <input class="input1" type="text" name="nationalNumber" value="@Model.Item1.nationalNumber" placeholder="شماره ملی">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Subject is required">
+                <input class="input1" id="reserveDate" type="text" name="reserveDate" placeholder="تاریخ رزرو">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Subject is required">
+                <select name="employeeID" class="input1 getFont" style="border-radius:25px; height:50px;">
+                    @foreach (var item in Model.Item2)
+                    {
+                        if (item.Type == 1)
+                        {
+                            <option value="@item.employeeID">دکتر @item.firstName @item.lastName</option>
+                        }
+                    }
+                </select>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Message is required">
+                <textarea class="input1" name="Description" placeholder="توضیحات"></textarea>
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="container-contact1-form-btn">
+                <button class="contact1-form-btn">
+                    <span>
+                        ثبت نوبت
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
 </div>
 
+@section ScriptsInViews{
+    <!--===============================================================================================-->
+    @*<script src="~/js/jquery-1.10.1.min.js"></script>*@
+    <!--===============================================================================================-->
+    <script src="/vendor/bootstrap/js/popper.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+    <!--===============================================================================================-->
+    <script src="~/js/ReserveMain.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#reserveDate').persianDatepicker();
+        });
+    </script>
+
+}

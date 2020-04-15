@@ -73,7 +73,10 @@ namespace DoctorOffice_Project.Areas.secretaryPanel.Controllers
         [HttpPost("InsertEmployee")]
         public async Task<IActionResult> insertData(Employees employees, IFormFile imgUp, string returnUrl = "")
         {
-            employees.Type = (int)constantConcepts.EmployeeType.secretary;
+            if(returnUrl == "/DoctorPanel/Profile")
+            {
+                employees.Type = (int)constantConcepts.EmployeeType.doctor;
+            }
             employees.createDate = DateTime.Now.toShamsi();
 
             if (imgUp != null)

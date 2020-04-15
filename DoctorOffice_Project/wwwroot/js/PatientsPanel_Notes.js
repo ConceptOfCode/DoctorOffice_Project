@@ -4,8 +4,6 @@
     var toDate = $('#toDate').val();
     toDate = toDate.replace(/\//g, '$');
 
-    alert('fromDate ->' + fromDate + '%%' + 'toDate ->' + toDate);
-
     var tr = '';
     $('#noteList tbody').empty();
 

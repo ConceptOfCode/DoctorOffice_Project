@@ -41,7 +41,7 @@
                                 مدیریتی پزشکان
                             </a>
                             <div class="d-flex justify-content-center align-self-center bottom-border pb-2">
-                                <img src="~/uploadImages/@currentUser.imageName" alt="" width="40" height="30" class="rounded-circle ml-2">
+                                <img src="/uploadImages/@if(currentUser != null){ @currentUser.imageName }" alt="" width="40" height="30" class="rounded-circle ml-2">
                                 <a href="#" class="text-white">
                                     @if (currentUser != null)
                                     {

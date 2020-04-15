@@ -85,7 +85,7 @@ namespace DoctorOffice.Services
             }
         }
 
-        public async void saveChanges()
+        public async Task saveChanges()
         {
             await db.SaveChangesAsync();
         }
@@ -104,6 +104,18 @@ namespace DoctorOffice.Services
                 currentDate = DateTime.Now.toShamsi(),
                 doctorFullName = s.Employees.firstName + " " + s.Employees.lastName
             }));
+        }
+
+        public async Task<IEnumerable<PatientReserveList_ViewModel>> getPatientReserveList(string Email)
+        {
+            return await Task.Run(() => db.Turns.Select(s => new PatientReserveList_ViewModel()
+            {
+                turnsID = s.turnsID,
+                currentDate = DateTime.Now.toShamsi(),
+                reserveDate = s.reserveDate,
+                doctorFullName = s.Employees.firstName + " " + s.Employees.lastName,
+                PatientEmail = s.Patients.Email
+            }).Where(w=> w.PatientEmail == Email));
         }
 
         public async Task<SecretaryreserveDetails_ViewModel> getDetails(int turnsID)

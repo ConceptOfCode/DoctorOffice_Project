@@ -39,11 +39,11 @@ namespace DoctorOffice_Project.Areas.patientsPanel.Controllers
         {
             List<PatientsPanelNoteListViewModel> noteList;
 
-            var data = await noteRepository.PatientsSearchNotes();
+            var data = await noteRepository.patientsNoteList(User.Identity.Name);
 
             checkDate(fromDate.Replace('$','/'), toDate.Replace('$','/'), data, out noteList);
 
-            if (data.Any())
+            if (noteList.Count > 0)
             {
                 return jsonResult.GetJsonResult((int)constantConcepts.httpStatus.successed, constantConcepts.httpStatus.successed.ToString(), "/PatientsPanel/NoteList", JsonConvert.SerializeObject(noteList));
             }
@@ -51,6 +51,14 @@ namespace DoctorOffice_Project.Areas.patientsPanel.Controllers
             return jsonResult.GetJsonResult((int)constantConcepts.httpStatus.notFound, constantConcepts.httpStatus.notFound.ToString(), "", "");
         }
 
+        /// <summary>
+        /// یک تاریخ شروع با یک تاریخ اتمام میگیرد و همچنین یک لیست داده که از دیتا بیس اومده و یک لیست خالی با ارجاع آدرس
+        /// لیست دیتابیس را با وردی های داده شده یعنی تاریخ شروع و پایان.مقایسه میکند و اگر تاریخ در دیتابیس بین دو تاریخ ورودی باشد آن یاداشت به لیست خالی اضافه میشود
+        /// </summary>
+        /// <param name="fromDateParam"></param>
+        /// <param name="toDateParam"></param>
+        /// <param name="CurrentListFromDB"></param>
+        /// <param name="finalList"></param>
         public void checkDate(string fromDateParam, string toDateParam, IEnumerable<PatientsPanelNoteListViewModel> CurrentListFromDB, out List<PatientsPanelNoteListViewModel> finalList)
         {
             var fromDate = fromDateParam.toDate();

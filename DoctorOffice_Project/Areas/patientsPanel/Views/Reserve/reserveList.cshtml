@@ -1,4 +1,7 @@
 ﻿
+@model IEnumerable<PatientReserveList_ViewModel>
+
+
 @{
     ViewData["Title"] = "reserveList";
     Layout = "~/Areas/patientsPanel/Views/Shared/_patientsLayout.cshtml";
@@ -31,45 +34,18 @@
     </thead>
 
     <tbody>
-        <tr>
-            <td>1001</td>
-            <td>1398/08/08</td>
-            <td>1398/12/01</td>
-            <td>محندعلی</td>
-            <td>
-                <a class="btn btn-sm btn btn-primary">جزییات</a>
-            </td>
-        </tr>
-
-        <tr>
-            <td>1001</td>
-            <td>1398/08/08</td>
-            <td>1398/12/01</td>
-            <td>محندعلی</td>
-            <td>
-                <a class="btn btn-sm btn btn-primary">جزییات</a>
-            </td>
-        </tr>
-
-        <tr>
-            <td>1001</td>
-            <td>1398/08/08</td>
-            <td>1398/12/01</td>
-            <td>محندعلی</td>
-            <td>
-                <a class="btn btn-sm btn btn-primary">جزییات</a>
-            </td>
-        </tr>
-
-        <tr>
-            <td>1001</td>
-            <td>1398/08/08</td>
-            <td>1398/12/01</td>
-            <td>محندعلی</td>
-            <td>
-                <a class="btn btn-sm btn btn-primary">جزییات</a>
-            </td>
-        </tr>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.turnsID</td>
+                <td>@item.reserveDate</td>
+                <td>@item.currentDate</td>
+                <td>@item.doctorFullName</td>
+                <td>
+                    <a asp-controller="Reserve" asp-action="Details" asp-area="PatientsPanel" asp-route-TurnsID="@item.turnsID" class="btn btn-sm btn btn-primary">جزییات</a>
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
 
