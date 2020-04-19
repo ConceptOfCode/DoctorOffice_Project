@@ -42,6 +42,8 @@ namespace DoctorOffice_Project
             services.AddTransient<IDoctorsPrescriptionsRepository, doctorsPrescriptionsRepository>();
             services.AddTransient<IMedicinesRpository, medicinesRepository>();
             services.AddTransient<IHowUsesRepository, howUsesRepository>();
+            services.AddTransient<IMemoriesRepository, memoriesRepository>();
+            services.AddTransient<ITemporaryPatientsRepository, temporaryPatientsRepository>();
 
 
             services.AddDbContext<ProjectContext>(options =>

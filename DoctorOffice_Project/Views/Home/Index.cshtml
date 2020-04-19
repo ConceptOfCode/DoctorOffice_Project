@@ -67,7 +67,7 @@
             </div>
             <div class="col-lg-7 about-text">
                 <h2>ما به دندان های شما اهمیت میدیم</h2>
-                <p>
+                <p id="">
                     ما در این درمانگاه در تلاشیم با استفاده از امکانات روز دنیا و همچنین پزشکانی مجرب درمانی بسیار بسیار عالی را برای مریضان فراهم آوریم
                     و همچنین امیدواریم امکانات و خدمات ما برای مریضان قابل قبول و همچنین کارامد بوده باشد
                 </p>
@@ -75,35 +75,13 @@
             </div>
         </div>
     </div>
+    <section id="triggerFactCounter"><p></p></section>
 </section>
 <!-- About section end -->
 <!-- Facts section -->
-<section class="facts-section set-bg" data-setbg="img/facts-bg.jpg">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6 fact">
-                <i class="flaticon-003-tooth-3"></i>
-                <h2>531</h2>
-                <p>بیماران راضی</p>
-            </div>
-            <div class="col-md-3 col-sm-6 fact">
-                <i class="flaticon-002-toothbrush-1"></i>
-                <h2>14</h2>
-                <p>بیماران درمان شده</p>
-            </div>
-            <div class="col-md-3 col-sm-6 fact">
-                <i class="flaticon-030-tooth"></i>
-                <h2>678</h2>
-                <p>بیماران دارای پرونده</p>
-            </div>
-            <div class="col-md-3 col-sm-6 fact">
-                <i class="flaticon-023-tooth-1"></i>
-                <h2>2134</h2>
-                <p>نوبت های رزرو شده</p>
-            </div>
-        </div>
-    </div>
-</section>
+
+<partial name="_FactsPartialView" />
+
 <!-- Facts section end -->
 <!-- Services section -->
     @(await Component.InvokeAsync("ServicesComponent"))
@@ -129,73 +107,9 @@
 </div>
 <!-- Gallery section end -->
 <!-- Testimonials section -->
-<section class="testimonials-section spad">
-    <div class="container">
-        <div class="section-title text-center">
-            <h2>توصیفات</h2>
-        </div>
-    </div>
-    <div class="testimonials-warp">
-        <div class="testimonials-slider owl-carousel">
-            <div class="testimonial-item">
-                <div class="ts-content">
-                    <div class="quta">“</div>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                    </p>
-                    <h6>مستر ایکس</h6>
-                    <span>بیمار</span>
-                </div>
-                <div class="author-pic set-bg" data-setbg="img/review/1.jpg"></div>
-            </div>
-            <div class="testimonial-item">
-                <div class="ts-content">
-                    <div class="quta">“</div>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                    </p>
-                    <h6>مستر ایکس</h6>
-                    <span>بیمار</span>
-                </div>
-                <div class="author-pic set-bg" data-setbg="img/review/2.jpg"></div>
-            </div>
-            <div class="testimonial-item">
-                <div class="ts-content">
-                    <div class="quta">“</div>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                    </p>
-                    <h6>مستر ایکس</h6>
-                    <span>بیمار</span>
-                </div>
-                <div class="author-pic set-bg" data-setbg="img/review/3.jpg"></div>
-            </div>
-            <div class="testimonial-item">
-                <div class="ts-content">
-                    <div class="quta">“</div>
-                    <p>
-                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
-                        استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
-                        در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
-                        نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
-                    </p>
-                    <h6>مستر ایکس</h6>
-                    <span>بیمار</span>
-                </div>
-                <div class="author-pic set-bg" data-setbg="img/review/2.jpg"></div>
-            </div>
-        </div>
-    </div>
-</section>
+
+@(await Component.InvokeAsync("MemoriesComponent"))
+
 <!-- Testimonials section end -->
 <!-- Newsletter section -->
 <!-- <section class="newsletter-section spad">

@@ -1,0 +1,25 @@
+﻿
+@model Memories
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Areas/secretaryPanel/Views/Shared/_secretaryLayout.cshtml";
+}
+
+<div class="alert alert-primary text-center margin-top-2-3">
+    <h4>جزییات نظر بیماران</h4>
+</div>
+<div class="container text-right">
+    <h3 class="text-muted">@Model.memoriesTitle</h3>
+    <label class="text-primary">تاریخ ثبت : </label> <label>@Model.createDate</label><br>
+    <hr>
+    <label id="fullTextNote">متن کامل نظر :</label>
+    <p>@Model.fullTextMemories</p>
+</div>
+
+<div class="row">
+    <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6">
+        <a asp-controller="Memories" asp-action="Index" asp-area="secretaryPanel" class="btn btn-primary">تاييد و بازگشت</a>
+    </div>
+</div>
+

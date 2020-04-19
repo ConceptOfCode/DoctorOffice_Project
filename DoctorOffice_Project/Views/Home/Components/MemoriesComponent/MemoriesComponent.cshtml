@@ -1,0 +1,72 @@
+﻿
+@model IEnumerable<Memories>
+
+<section class="testimonials-section spad">
+    <div class="container">
+        <div class="section-title text-center">
+            <h2>توصیفات</h2>
+        </div>
+    </div>
+    <div class="testimonials-warp">
+        <div class="testimonials-slider owl-carousel">
+
+            @foreach (var item in Model)
+            {
+                <div class="testimonial-item">
+                    <div class="ts-content">
+                        <div class="quta">“</div>
+                        <p>
+                            @item.fullTextMemories
+                        </p>
+                        <h6>@item.memoriesTitle</h6>
+                        <span>بیمار</span>
+                    </div>
+                    <div class="author-pic set-bg" data-setbg="img/review/1.jpg"></div>
+                </div>
+            }
+
+            @*<div class="testimonial-item">
+            <div class="ts-content">
+                <div class="quta">“</div>
+                <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                    استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                    در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                    نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+                <h6>مستر ایکس</h6>
+                <span>بیمار</span>
+            </div>
+            <div class="author-pic set-bg" data-setbg="img/review/2.jpg"></div>
+        </div>
+        <div class="testimonial-item">
+            <div class="ts-content">
+                <div class="quta">“</div>
+                <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                    استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                    در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                    نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+                <h6>مستر ایکس</h6>
+                <span>بیمار</span>
+            </div>
+            <div class="author-pic set-bg" data-setbg="img/review/3.jpg"></div>
+        </div>
+        <div class="testimonial-item">
+            <div class="ts-content">
+                <div class="quta">“</div>
+                <p>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با
+                    استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                    در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد
+                    نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد.
+                </p>
+                <h6>مستر ایکس</h6>
+                <span>بیمار</span>
+            </div>
+            <div class="author-pic set-bg" data-setbg="img/review/2.jpg"></div>
+        </div>*@
+        </div>
+    </div>
+</section>

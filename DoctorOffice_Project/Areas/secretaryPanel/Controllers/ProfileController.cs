@@ -35,7 +35,7 @@ namespace DoctorOffice_Project.Areas.secretaryPanel.Controllers
             {
                 ViewBag.Status = constantConcepts.Status.error;
             }
-            return await Task.Run(() => View(data));
+            return View(data);
         }
 
         [HttpGet("checkBeforeInsertEmployee/{nationalID}/{Email}")]
@@ -73,7 +73,7 @@ namespace DoctorOffice_Project.Areas.secretaryPanel.Controllers
         [HttpPost("InsertEmployee")]
         public async Task<IActionResult> insertData(Employees employees, IFormFile imgUp, string returnUrl = "")
         {
-            if(returnUrl == "/DoctorPanel/Profile")
+            if (returnUrl == "/DoctorPanel/Profile")
             {
                 employees.Type = (int)constantConcepts.EmployeeType.doctor;
             }
@@ -139,7 +139,7 @@ namespace DoctorOffice_Project.Areas.secretaryPanel.Controllers
 
             if (returnUrl == "/DoctorPanel/Profile")
             {
-                return RedirectToAction("Index","Profile",new { area = "doctorPanel"});
+                return RedirectToAction("Index", "Profile", new { area = "doctorPanel" });
             }
 
             return RedirectToAction("Index");

@@ -1,0 +1,8 @@
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ViewModels\bin\Release\netcoreapp3.1\DoctorOffice.ViewModels.deps.json
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ViewModels\bin\Release\netcoreapp3.1\DoctorOffice.ViewModels.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ViewModels\bin\Release\netcoreapp3.1\DoctorOffice.ViewModels.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ViewModels\obj\Release\netcoreapp3.1\DoctorOffice.ViewModels.csprojAssemblyReference.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ViewModels\obj\Release\netcoreapp3.1\DoctorOffice.ViewModels.AssemblyInfoInputs.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ViewModels\obj\Release\netcoreapp3.1\DoctorOffice.ViewModels.AssemblyInfo.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ViewModels\obj\Release\netcoreapp3.1\DoctorOffice.ViewModels.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ViewModels\obj\Release\netcoreapp3.1\DoctorOffice.ViewModels.pdb

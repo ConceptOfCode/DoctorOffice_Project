@@ -1,0 +1,8 @@
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Enums\bin\Release\netcoreapp3.1\DoctorOffice.Enums.deps.json
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Enums\bin\Release\netcoreapp3.1\DoctorOffice.Enums.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Enums\bin\Release\netcoreapp3.1\DoctorOffice.Enums.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Enums\obj\Release\netcoreapp3.1\DoctorOffice.Enums.csprojAssemblyReference.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Enums\obj\Release\netcoreapp3.1\DoctorOffice.Enums.AssemblyInfoInputs.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Enums\obj\Release\netcoreapp3.1\DoctorOffice.Enums.AssemblyInfo.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Enums\obj\Release\netcoreapp3.1\DoctorOffice.Enums.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Enums\obj\Release\netcoreapp3.1\DoctorOffice.Enums.pdb

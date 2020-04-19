@@ -230,29 +230,29 @@ main {
     border-right: 3px solid #f66436;
 }
 /* end of task list */
-#reserveList {
+#reserveList, #memoriesList {
     box-shadow: 0px 4px 14px -10px black;
     direction: rtl;
     text-align: right;
 }
 
-    #reserveList tr {
+    #reserveList tr, #memoriesList tr {
         height: 4rem;
     }
 
-        #reserveList tr:nth-child(odd) {
+        #reserveList tr:nth-child(odd), #memoriesList tr:nth-child(odd) {
             background-color: rgba(25, 153, 204, 0.2);
         }
 
-        #reserveList tr:nth-child(even) {
+        #reserveList tr:nth-child(even), #memoriesList tr:nth-child(even) {
             background-color: rgba(202, 202, 202,0.1);
         }
 
-    #reserveList thead {
+    #reserveList thead, #memoriesList thead{
         opacity: 0.9;
     }
 
-    #reserveList tbody tr td:last-child a {
+    #reserveList tbody tr td:last-child a, #memoriesList tbody tr td:last-child a {
         color: rgb(255, 255, 255) !important;
         cursor: pointer;
     }

@@ -30,5 +30,9 @@ namespace DoctorOffice.Services
         Task<SecretaryreserveDetails_ViewModel> getDetails(int turnsID);
 
         Task<IEnumerable<SecretaryReserveList_ViewModel>> searchList(string reserveDate);
+
+        Task<int> getTurnsCount();
+
+        Task<int> getCountHappyPatients();
     }
 }

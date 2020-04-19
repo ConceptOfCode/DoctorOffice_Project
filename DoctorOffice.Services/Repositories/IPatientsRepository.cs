@@ -24,10 +24,16 @@ namespace DoctorOffice.Services
 
         Task<bool> isExistsPatients(int nationalID);
 
+        Task<bool> isExistsPatientsByEmail(string Email);
+
         Task<bool> checkNationalNumberForEdit(int patientsID,int nationalID);
+
+        Task<bool> checkEmail(int empID, string Email);
 
         Task<IEnumerable<patients>> getPatientsByNationalID(int nationalID);
 
         Task<patients> getCurrentUserInformations(string Email);
+
+        Task<int> getPatientsCount();
     }
 }

@@ -1,0 +1,13 @@
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\bin\Release\netcoreapp3.1\DoctorOffice.DataLayer.deps.json
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\bin\Release\netcoreapp3.1\DoctorOffice.DataLayer.runtimeconfig.json
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\bin\Release\netcoreapp3.1\DoctorOffice.DataLayer.runtimeconfig.dev.json
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\bin\Release\netcoreapp3.1\DoctorOffice.DataLayer.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\bin\Release\netcoreapp3.1\DoctorOffice.DataLayer.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\bin\Release\netcoreapp3.1\DoctorOffice.Domains.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\bin\Release\netcoreapp3.1\DoctorOffice.Domains.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\obj\Release\netcoreapp3.1\DoctorOffice.DataLayer.csprojAssemblyReference.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\obj\Release\netcoreapp3.1\DoctorOffice.DataLayer.AssemblyInfoInputs.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\obj\Release\netcoreapp3.1\DoctorOffice.DataLayer.AssemblyInfo.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\obj\Release\netcoreapp3.1\DoctorOffice.DataLayer.csproj.CopyComplete
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\obj\Release\netcoreapp3.1\DoctorOffice.DataLayer.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.DataLayer\obj\Release\netcoreapp3.1\DoctorOffice.DataLayer.pdb

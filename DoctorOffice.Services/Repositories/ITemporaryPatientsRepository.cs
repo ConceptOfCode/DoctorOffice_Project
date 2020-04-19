@@ -20,6 +20,6 @@ namespace DoctorOffice.Services
 
         Task<bool> deleteTemporaryPatients(int id);
 
-        void saveChanges();
+        Task saveChanges();
     }
 }

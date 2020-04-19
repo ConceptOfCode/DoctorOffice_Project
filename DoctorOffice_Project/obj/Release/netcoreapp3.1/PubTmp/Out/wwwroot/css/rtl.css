@@ -1,0 +1,105 @@
+@font-face {
+  font-family: "Samim";
+  src: url("../fonts/Samim-FD.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Samim-FD.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */ url("../fonts/Samim-FD.woff") format("woff"),
+    /* Pretty Modern Browsers */ url("../fonts/Samim-FD.woff2") format("woff2"),
+    /* Pretty Modern Browsers */ url("../fonts/Samim-FD.ttf") format("truetype");
+  /* Safari, Android, iOS */
+}
+body,
+a,
+span,
+h1,
+h2,
+h3,
+h6,
+h5,
+p,
+div,
+input::placeholder,
+label,
+button,
+li {
+  font-family: "Samim" !important;
+}
+.header-info {
+  direction: rtl;
+  text-align: right;
+}
+.hs-icon {
+  float: right !important;
+  margin-left: 15px;
+}
+.banner-section {
+  direction: rtl;
+  text-align: right;
+}
+.about-text {
+  text-align: right !important;
+}
+
+.service {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+.service-content {
+  padding-left: none !important;
+  margin-right: 10px;
+}
+
+.newsletter-section {
+  text-align: right;
+}
+input::placeholder,textarea {
+  text-align: right;
+
+  font-family: "Samim";
+  font-size: 15px;
+  direction: rtl;
+}
+.newsletter-form.site-btn {
+  left: 0 !important;
+}
+.footer-top-section{
+    direction: rtl;
+    text-align: right;
+}
+.fi-content h4{
+    text-align: right;
+}
+
+.fi-content p{
+    margin-right: 80px !important;
+    text-align: right;
+    
+    width: 100%;
+}
+.feature-item i{
+    float: right !important;
+}
+.sf-box{
+    text-align: right;
+}
+.faq-section{
+    direction: rtl;
+    text-align: right;
+}
+.faq-list li{
+    padding-right: 50px;
+}
+
+.contact-section{
+    display: flex !important;
+    flex-direction: row-reverse !important;
+    text-align: right;
+}
+.contact-info .ci-image{
+    float: right;
+    margin-left: 20px;
+}
+.site-btn{
+    float: right;
+}

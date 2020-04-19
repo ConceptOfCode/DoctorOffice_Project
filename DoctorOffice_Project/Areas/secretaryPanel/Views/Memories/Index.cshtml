@@ -1,0 +1,78 @@
+﻿
+@*@model IEnumerable<MemoriesInformation_ViewModel>*@
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/secretaryPanel/Views/Shared/_secretaryLayout.cshtml";
+}
+
+<div class="row" id="searchField">
+    <section class="col-lg-3 col-md-3 col-sm-3 col-xl-3">
+        <section class="row">
+            <section class="col-lg-6 col-md-6 col-sm-6 col-xl-6">
+                <label>فیلتر بر اساس : </label>
+            </section>
+        </section>
+    </section>
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-center">
+        <select class="form-control margin-top-2" id="filterGrid">
+            <option value="noSelected">بدون انتخاب ...</option>
+            <option value="isRendered">درحال نمایش</option>
+            <option value="orderNewToOld">نمایش به صورت از جدید به قدیم</option>
+            <option value="orderOldToNew">نمایش به صورت از قدیم به جدید</option>
+            <option value="showLast10">10 مورد آخر</option>
+        </select>
+    </section>
+    <section class="col-lg-4 col-md-4 col-sm-4 col-xl-4 text-right">
+        <a id="searchButton" class="btn btn-success">جست و جو</a>
+    </section>
+</div>
+
+<div class="alert alert-primary text-right">
+    <h5>شما میتوانید با مشاهده جزییات نظرات با زدن دکمه انتشار نظر آنرا بر روی صفحه اصلی سایت برای عموم انشار دهید</h5>
+</div>
+
+<table id="memoriesList" class="table table-hover table-bordered">
+    <thead class="thead-dark">
+    <th>کد نظر</th>
+    <th>کد شاناسایی بیمار</th>
+    <th>نام و نام خانوادگی بیمار</th>
+    <th>شماره ملی</th>
+    <th>عنوان نظر</th>
+    <th>تاریخ ثبت</th>
+    <th>عملیات</th>
+    </thead>
+
+    <tbody>
+        @*@foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.memoriesID</td>
+                <td>@item.patientsID</td>
+                <td>@item.fullNamePatient</td>
+                <td>@item.PatientsNationalNumber</td>
+                <td>@item.memoriesTitle</td>
+                <td>@item.createDateTime</td>
+                <td>
+                    <a  onclick="showDetailsMemories(@item.memoriesID)" class="btn btn-sm btn btn-primary">جزییات</a>
+                    <a class="btn btn-sm btn btn-success">انتشار نظر</a>
+                </td>
+            </tr>
+        }*@
+    </tbody>
+</table>
+
+
+<div id="Modal" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div id="ModalBody" class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+
+
+@section ScriptsViews{
+    <script src="~/js/MemoriesScripts.js"></script>
+}

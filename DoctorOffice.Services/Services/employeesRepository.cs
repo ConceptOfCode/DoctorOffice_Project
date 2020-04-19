@@ -137,5 +137,10 @@ namespace DoctorOffice.Services
         {
             return await db.Employees.Where(w => w.Email == Email).SingleOrDefaultAsync();
         }
+
+        public async Task<int> GetDoctorCount()
+        {
+            return await db.Employees.CountAsync(c => c.Type == 1);
+        }
     }
 }

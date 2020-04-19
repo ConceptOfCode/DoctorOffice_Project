@@ -191,7 +191,6 @@ C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\secretaryPanel\Views\patients\updateData.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\secretaryPanel\Views\Turns\Index.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\secretaryPanel\Views\Turns\Details.cshtml.g.cs
-C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Reserve\Reserve.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Reserve\reserveList.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Notes\Index.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\AccessDenied.cshtml.g.cs
@@ -259,3 +258,11 @@ C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\doctorPanel\Views\Profile\Index.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Notes\Details.cshtml.g.cs
 C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Reserve\Details.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Views\Home\_FactsPartialView.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Home\insertMemories.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\secretaryPanel\Views\Memories\Index.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\secretaryPanel\Views\Memories\Details.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Views\Home\Components\MemoriesComponent\MemoriesComponent.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Views\Home\aboutUs.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Areas\patientsPanel\Views\Reserve\Reserve.cshtml.g.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice_Project\obj\Debug\netcoreapp3.1\Razor\Views\Home\TemporaryReserve.cshtml.g.cs

@@ -33,5 +33,7 @@ namespace DoctorOffice.Services
         Task<bool> checkNationalID(int empID, int nationalID);
 
         Task<Employees> getCurrentUserInformations(string Email);
+
+        Task<int> GetDoctorCount();
     }
 }

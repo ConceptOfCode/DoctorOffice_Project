@@ -1,0 +1,8 @@
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ExtensionMethods\bin\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.deps.json
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ExtensionMethods\bin\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ExtensionMethods\bin\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ExtensionMethods\obj\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.csprojAssemblyReference.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ExtensionMethods\obj\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.AssemblyInfoInputs.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ExtensionMethods\obj\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.AssemblyInfo.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ExtensionMethods\obj\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.ExtensionMethods\obj\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.pdb

@@ -115,7 +115,7 @@ namespace DoctorOffice.Services
                 reserveDate = s.reserveDate,
                 doctorFullName = s.Employees.firstName + " " + s.Employees.lastName,
                 PatientEmail = s.Patients.Email
-            }).Where(w=> w.PatientEmail == Email));
+            }).Where(w => w.PatientEmail == Email));
         }
 
         public async Task<SecretaryreserveDetails_ViewModel> getDetails(int turnsID)
@@ -143,6 +143,16 @@ namespace DoctorOffice.Services
                 currentDate = DateTime.Now.toShamsi(),
                 doctorFullName = s.Employees.firstName + " " + s.Employees.lastName
             }).Where(w => w.reserveDate.Contains(reserveDate)));
+        }
+
+        public async Task<int> getTurnsCount()
+        {
+            return await db.Turns.CountAsync();
+        }
+
+        public async Task<int> getCountHappyPatients()
+        {
+            return await Task.Run(() => db.Turns.Select(s => s).GroupBy(g => g.patientsID).Where(w => w.Count() >= 2).Count());
         }
     }
 }

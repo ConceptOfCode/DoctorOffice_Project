@@ -82,7 +82,7 @@ namespace DoctorOffice.Services
             }
         }
 
-        public async void saveChanges()
+        public async Task saveChanges()
         {
             await db.SaveChangesAsync();
         }

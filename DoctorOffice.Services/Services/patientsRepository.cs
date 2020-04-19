@@ -114,12 +114,35 @@ namespace DoctorOffice.Services
 
         public async Task<IEnumerable<patients>> getPatientsByNationalID(int nationalID)
         {
-            return await Task.Run(()=> db.Patients.Where(w => w.nationalNumber == nationalID));
+            return await Task.Run(() => db.Patients.Where(w => w.nationalNumber == nationalID));
         }
 
         public async Task<patients> getCurrentUserInformations(string Email)
         {
             return await db.Patients.Where(w => w.Email == Email).SingleOrDefaultAsync();
+        }
+
+        public async Task<bool> checkEmail(int patientsID, string Email)
+        {
+            var find = await isExistsPatientsByEmail(Email);
+            if (find == false)
+            {
+                return true;
+            }
+            else
+            {
+                return await db.Patients.AnyAsync(a => a.patientsID == patientsID && a.Email == Email);
+            }
+        }
+
+        public async Task<bool> isExistsPatientsByEmail(string Email)
+        {
+            return await db.Patients.AnyAsync(a => a.Email == Email);
+        }
+
+        public async Task<int> getPatientsCount()
+        {
+            return await db.Patients.CountAsync();
         }
     }
 }

@@ -10,6 +10,16 @@
 /* Template default CSS
 /*----------------------------------------*/
 
+@import url(/css/fontiran.css);
+
+.getFont {
+    font-family: IRANSans !important;
+}
+
+input {
+    font-family: IRANSans !important;
+}
+
 html,
 body {
     height: 100%;

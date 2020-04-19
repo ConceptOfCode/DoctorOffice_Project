@@ -14,10 +14,10 @@
         <!-- Main Menu -->
         <ul class="main-menu">
             <!-- <li><a href="elements.html"><i class="flaticon-020-decay"></i></a></li> -->
-            <li><a href="#">تماس با ما</a></li>
-            <li><a href="#">درباره ما</a></li>
+            @*<li><a href="#">تماس با ما</a></li>*@
+            <li><a asp-action="AboutUs">درباره ما</a></li>
             <!-- <li><a href="blog.html">وبلاگ</a></li> -->
-            <li><a href="ReservePage.html">رزرو نوبت</a></li>
+            <li><a asp-action="TemporaryReserve">رزرو نوبت</a></li>
             <li><a href="/Identity/Account/Login?ReturnUrl=">ورود به حساب کاربری</a></li>
             <li><a asp-controller="Home" asp-action="createPatients">تشکیل پرونده</a></li>
             <li class="active"><a href="/">خانه</a></li>

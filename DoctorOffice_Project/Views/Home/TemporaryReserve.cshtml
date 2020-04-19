@@ -1,0 +1,163 @@
+﻿
+@inject IEmployeesRepository allEmployee
+
+@{
+    ViewData["Title"] = "reserve";
+    Layout = "~/Views/Shared/_defaultLayout.cshtml";
+}
+
+<section class="page-info-section set-bg" id="info" data-setbg="img/page-info-bg/1.jpg">
+    <div class="container">
+        <h2 class="text-right" dir="rtl">رزرو نوبت</h2>
+    </div>
+</section>
+
+
+@section StylesOnViews{
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="~/img/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/animate/animate.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="/vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="~/css/Reservemain.css">
+    <link rel="stylesheet" type="text/css" href="~/css/Reserveutil.css">
+    <!--===============================================================================================-->
+}
+
+
+<div class="">
+    <div class="container-contact1">
+        <div class="contact1-pic js-tilt" data-tilt>
+            <img src="~/img/img-01.png" alt="IMG">
+        </div>
+
+        <form action="/Home/TemporaryReserve" method="post" class="contact1-form validate-form">
+
+            <input type="text" name="PatientID" value="" hidden />
+
+            <h4 class="contact1-form-title getFont">
+                رزرو نوبت بیماران
+            </h4>
+
+            <div class="alert alert-success text-right" dir="rtl">
+                <ul>
+                    <li>این قسمت فقط برای رزرو نوبت برای بیماران موقت میباشد</li>
+                    <li>اگر دارای پرونده میباشید لطفااز پنل کاربری خود اقدام کنید</li>
+                </ul>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Name is required">
+                <input class="input1 text-right" type="text" name="firstName" value="" placeholder="نام خود را وارد کنید...">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input">
+                <input class="input1 text-right" type="text" name="lastName" value="" placeholder="نام خانوادگی خود را وارد کنید...">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Subject is required">
+                <input class="input1 text-right" id="" type="text" name="fatherName" placeholder="نام پدر خود را وارد کنید...">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Subject is required">
+                <input class="input1 text-right" id="" type="text" name="nationalNumber" placeholder="شماره ملی خود را وارد کنید...">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Subject is required">
+                <input class="input1 text-right" id="birthDate" type="text" name="birthDate" autocomplete="off" placeholder="تاریخ تولد خود را وارد کنید...">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input">
+                <input class="input1 text-right" type="text" name="phoneNumber" value="" placeholder="شماره تلفن خود را وارد کنید...">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input">
+                <input class="input1 text-right" type="text" name="Email" value="" placeholder="ایمیل خود را وارد کنید...">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input">
+                <input class="input1 text-right" id="reserveDate" type="text" name="reserveDate" value="" autocomplete="off" placeholder="تاریخ رزرو...">
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="wrap-input1 validate-input" dir="rtl" data-validate="Subject is required">
+                <select name="employeeID" class="input1 getFont text-right" style="border-radius:25px; height:50px;">
+
+                    @foreach (var item in await allEmployee.getAllEmployees())
+                    {
+                        if (item.Type == 1)
+                        {
+                            <option value="@item.employeeID">دکتر @item.firstName @item.lastName</option>
+                        }
+                    }
+
+                </select>
+
+            </div>
+
+            <div class="wrap-input1 validate-input" data-validate="Message is required">
+                <textarea class="input1 getFont text-right" name="Descriptions" placeholder="توضیحات"></textarea>
+                <span class="shadow-input1"></span>
+            </div>
+
+            <div class="container-contact1-form-btn">
+                <button class="contact1-form-btn">
+                    <span>
+                        ثبت نوبت
+                        <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section ScriptsOnViews{
+    <!--===============================================================================================-->
+    @*<script src="~/js/jquery-1.10.1.min.js"></script>*@
+    <!--===============================================================================================-->
+    <script src="/vendor/bootstrap/js/popper.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/vendor/select2/select2.min.js"></script>
+    <!--===============================================================================================-->
+    <script src="/vendor/tilt/tilt.jquery.min.js"></script>
+    <script>
+        $('.js-tilt').tilt({
+            scale: 1.1
+        })
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-23581568-13');
+    </script>
+
+    <!--===============================================================================================-->
+    <script src="~/js/ReserveMain.js"></script>
+
+    <script>
+        $('#reserveDate').persianDatepicker();
+        $('#birthDate').persianDatepicker();
+    </script>
+
+}

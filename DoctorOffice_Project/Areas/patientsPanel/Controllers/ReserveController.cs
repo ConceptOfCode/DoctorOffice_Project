@@ -8,6 +8,7 @@ using DoctorOffice.Services;
 using DoctorOffice.ViewModels;
 using DoctorOffice.Domains;
 using DoctorOffice.ExtensionMethods;
+using Newtonsoft.Json;
 
 namespace DoctorOffice_Project.Areas.patientsPanel.Controllers
 {
@@ -65,6 +66,18 @@ namespace DoctorOffice_Project.Areas.patientsPanel.Controllers
         {
             var data = await turnsRepository.getDetails(TurnsID);
             return View(data);
+        }
+
+        [Route("PatientsPanel/searchReserve/{Date}")]
+        public async Task<jsonResult> searchReserve(string Date)
+        {
+            var data = await turnsRepository.searchList(Date.Replace('$','/'));
+            if (data.Any())
+            {
+                return jsonResult.GetJsonResult((int)DoctorOffice.Enums.constantConcepts.httpStatus.successed, DoctorOffice.Enums.constantConcepts.httpStatus.successed.ToString(), "/PatientsPanel/reserveList", JsonConvert.SerializeObject(data));
+            }
+
+            return jsonResult.GetJsonResult((int)DoctorOffice.Enums.constantConcepts.httpStatus.notFound, DoctorOffice.Enums.constantConcepts.httpStatus.notFound.ToString(), "", "");
         }
     }
 }

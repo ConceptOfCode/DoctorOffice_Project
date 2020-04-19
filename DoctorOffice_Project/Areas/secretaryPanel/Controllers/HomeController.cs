@@ -140,17 +140,22 @@ namespace DoctorOffice_Project.Areas.secretaryPanel.Controllers
             return RedirectToAction("Index");
         }
 
+        [AllowAnonymous]
         [Route("Logout")]
         public async Task<IActionResult> Logout(string returnUrl = "")
         {
             foreach (var item in HttpContext.Request.Cookies.Keys)
             {
-               await Task.Run(()=> Response.Cookies.Delete(item));
+                await Task.Run(() => Response.Cookies.Delete(item));
             }
 
             if (returnUrl == "/doctorPanel")
             {
                 return RedirectToAction("Index", "Home", new { area = "doctorPanel" });
+            }
+            if (returnUrl == "/patientsPanel")
+            {
+                return RedirectToAction("Index", "Home", new { area = "patientsPanel" });
             }
 
             return RedirectToAction("Index");

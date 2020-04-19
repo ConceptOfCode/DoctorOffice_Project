@@ -5,7 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-
+using DoctorOffice.ViewModels;
+using System.Linq;
 
 namespace DoctorOffice.Services
 {
@@ -84,7 +85,7 @@ namespace DoctorOffice.Services
             }
         }
 
-        public async void saveChanges()
+        public async Task saveChanges()
         {
             await db.SaveChangesAsync();
         }
@@ -92,6 +93,26 @@ namespace DoctorOffice.Services
         public async void Dispose()
         {
             await db.DisposeAsync();
+        }
+
+        public async Task<IEnumerable<MemoriesInformation_ViewModel>> getAllMemoriesInformation()
+        {
+            return await Task.Run(() => db.Memories.Select(s => new MemoriesInformation_ViewModel()
+            {
+                memoriesID = s.MemoriesID,
+                patientsID = s.patientsID,
+                fullNamePatient = s.Patients.firstName + " " + s.Patients.lastName,
+                PatientsNationalNumber = s.Patients.nationalNumber,
+                memoriesTitle = s.memoriesTitle,
+                memoriesFullText = s.fullTextMemories,
+                createDateTime = s.createDate,
+                likeCount = s.likeCount
+            }));
+        }
+
+        public async Task<IEnumerable<Memories>> getEnableMemories()
+        {
+            return await Task.Run(() => db.Memories.Where(w => w.memoriesTitle.Contains("$%#")));
         }
     }
 }

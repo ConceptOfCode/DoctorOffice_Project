@@ -4,7 +4,7 @@
     Layout = "~/Views/Shared/_defaultLayout.cshtml";
 }
 
-@section StylesOnViews{ 
+@section StylesOnViews{
     <link href="~/css/RegistrationStyles.css" rel="stylesheet" />
 }
 
@@ -16,7 +16,7 @@
 
 <div id="folderContent">
     <div class="container" dir="auto">
-        <form id="MainForm" method="POST" class="form-horizontal" role="form" onsubmit="return isValid">
+        <form id="MainForm" method="POST" action="/Home/createPatients" class="form-horizontal" role="form" onsubmit="return isValid" enctype="multipart/form-data">
             <h3 id="title" class="text-center">اطلاعات زیر را با دقت پر کنید</h3>
             <div class="form-group text-right" dir="rtl">
                 <label for="firstName" class="col-sm-3 control-label">نام</label>
@@ -76,7 +76,7 @@
             <div class="form-group text-right">
                 <label for="password" class="col-sm-3 control-label">تکرار رمز عبور</label>
                 <div class="col-sm-9">
-                    <input type="password" id="confpassword" class="form-control">
+                    <input type="password" name="confpassword" id="confpassword" class="form-control">
                 </div>
             </div>
             <!-- <div class="form-group">
@@ -107,22 +107,22 @@
             <div class="form-group text-right">
                 <label for="birthDate" class="col-sm-3 control-label">تصویر</label>
                 <div class="col-sm-9">
-                    <input type="file" name="imageName" id="imageName" class="form-control">
+                    <input type="file" name="ImgUp" id="imgUp" class="form-control">
                 </div>
             </div>
             <div class="form-group">
 
             </div>
             <input id="Save" value="ثبت نام" type="submit" class="btn btn-success btn-block" />
-            <button href="#" class="btn btn-danger btn-block">انصراف</button>
+            <a  class="btn btn-danger btn-block" href="/" >انصراف</a>
         </form>
         <!-- /form -->
     </div> <!-- ./container -->
 
     @section ScriptsOnViews{
-            <script>
-                $('#folderContent').css({ 'background-image': 'url("/img/slide-1.jpg")','background-repeat':'no-repeat','background-attachment':'fixed','background-size':'cover'});
+        <script>
+            $('#folderContent').css({ 'background-image': 'url("/img/slide-1.jpg")', 'background-repeat': 'no-repeat', 'background-attachment': 'fixed', 'background-size': 'cover' });
 
-            </script>
-        }
+        </script>
+    }
 </div>

@@ -1,0 +1,17 @@
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.Services.deps.json
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.Services.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.Services.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.DataLayer.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.Domains.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.ViewModels.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.DataLayer.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.Domains.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.ExtensionMethods.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\bin\Release\netcoreapp3.1\DoctorOffice.ViewModels.pdb
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\obj\Release\netcoreapp3.1\DoctorOffice.Services.csprojAssemblyReference.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\obj\Release\netcoreapp3.1\DoctorOffice.Services.AssemblyInfoInputs.cache
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\obj\Release\netcoreapp3.1\DoctorOffice.Services.AssemblyInfo.cs
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\obj\Release\netcoreapp3.1\DoctorOffice.Services.csproj.CopyComplete
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\obj\Release\netcoreapp3.1\DoctorOffice.Services.dll
+C:\Users\HamidS\source\repos\DoctorOffice_Project\DoctorOffice.Services\obj\Release\netcoreapp3.1\DoctorOffice.Services.pdb
